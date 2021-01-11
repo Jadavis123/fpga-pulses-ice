@@ -1,0 +1,7 @@
+1. add ecp5.lpf from ECP5 folder for contstraint file instead of icebox.pcf
+	-make sure pin names match i/o of pulse_gen (I had to change P2 to Block)
+2. to create ecp pll file (with 12 MHz input), run the command: ecppll -i 12 -o 200 --clkin_name clock_in --clkout0_name clock_out -f ecppll.v
+	-optional: delete icepll.v (shouldn't cause any confusion since it's not included in Makefile, but doesn't hurt)
+3. replace HX8K Makefile with Makefile from ECP5 folder to use that toolchain
+4. make sure clk_constraint.py uses correct frequency values (12 input, 200 output)
+After performing these steps and running make, output reports that timing fails (max freq ~187 MHz). Made following changes to improve timing:

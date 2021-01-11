@@ -245,19 +245,19 @@ Found init rule in `\pulse_control.$proc$pulse_control.v:108$43'.
 Found init rule in `\pulse_control.$proc$pulse_control.v:106$41'.
   Set init value: \writestate = 1'0
 Found init rule in `\pulse_control.$proc$pulse_control.v:45$40'.
-  Set init value: \nut_wid = 8'01100100
+  Set init value: \nut_wid = 8'00000000
 Found init rule in `\pulse_control.$proc$pulse_control.v:44$39'.
-  Set init value: \nut_del = 16'0000000001100100
+  Set init value: \nut_del = 16'0000000000000000
 Found init rule in `\pulse_control.$proc$pulse_control.v:43$38'.
   Set init value: \rx_done = 1'0
 Found init rule in `\pulse_control.$proc$pulse_control.v:42$37'.
   Set init value: \block = 1'1
 Found init rule in `\pulse_control.$proc$pulse_control.v:41$36'.
-  Set init value: \cpmg = 8'00000011
+  Set init value: \cpmg = 8'00000001
 Found init rule in `\pulse_control.$proc$pulse_control.v:39$34'.
   Set init value: \pulse_block = 8'00110010
 Found init rule in `\pulse_control.$proc$pulse_control.v:38$33'.
-  Set init value: \p2width = 16'0000000000011110
+  Set init value: \p2width = 16'0000000000111100
 Found init rule in `\pulse_control.$proc$pulse_control.v:37$32'.
   Set init value: \delay = 16'0000000011001000
 Found init rule in `\pulse_control.$proc$pulse_control.v:36$31'.
@@ -1017,14 +1017,10 @@ Setting constant 0-bit at position 29 on $auto$opt_dff.cc:764:run$1545 ($dffe) f
 Setting constant 0-bit at position 30 on $auto$opt_dff.cc:764:run$1545 ($dffe) from module pulse_gen.
 Setting constant 0-bit at position 31 on $auto$opt_dff.cc:764:run$1545 ($dffe) from module pulse_gen.
 Adding EN signal on $flatten\pulses.$procdff$1481 ($dff) from module pulse_gen (D = \control.cpmg, Q = \pulses.cpmg).
-Adding EN signal on $flatten\pulses.$procdff$1480 ($dff) from module pulse_gen (D = 16'0000000001100100, Q = \pulses.pulse_block_off).
+Adding EN signal on $flatten\pulses.$procdff$1480 ($dff) from module pulse_gen (D = 16'0000000000110010, Q = \pulses.pulse_block_off).
 Setting constant 0-bit at position 0 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
-Setting constant 0-bit at position 1 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
-Setting constant 1-bit at position 2 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
 Setting constant 0-bit at position 3 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
-Setting constant 0-bit at position 4 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
 Setting constant 1-bit at position 5 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
-Setting constant 1-bit at position 6 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
 Setting constant 0-bit at position 7 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
 Setting constant 0-bit at position 8 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
 Setting constant 0-bit at position 9 on $auto$opt_dff.cc:764:run$1547 ($dffe) from module pulse_gen.
@@ -1214,10 +1210,10 @@ Removed 72 multiplexer ports.
     New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1679: { $auto$rtlil.cc:2121:Not$1677 $auto$opt_dff.cc:217:make_patterns_logic$1674 $auto$opt_dff.cc:217:make_patterns_logic$1672 $auto$opt_dff.cc:217:make_patterns_logic$1670 $auto$opt_dff.cc:217:make_patterns_logic$1668 }
     New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1661: { $auto$rtlil.cc:2121:Not$1659 $auto$opt_dff.cc:217:make_patterns_logic$1656 $auto$opt_dff.cc:217:make_patterns_logic$1654 $auto$opt_dff.cc:217:make_patterns_logic$1652 $auto$opt_dff.cc:217:make_patterns_logic$1650 $auto$opt_dff.cc:217:make_patterns_logic$1648 $auto$opt_dff.cc:217:make_patterns_logic$1646 }
     New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1639: { $auto$rtlil.cc:2121:Not$1637 $auto$rtlil.cc:2121:Not$1635 $auto$opt_dff.cc:217:make_patterns_logic$1632 $auto$opt_dff.cc:217:make_patterns_logic$1630 $auto$opt_dff.cc:217:make_patterns_logic$1628 $auto$opt_dff.cc:217:make_patterns_logic$1626 $auto$opt_dff.cc:217:make_patterns_logic$1624 }
-    New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1620: { $auto$opt_dff.cc:217:make_patterns_logic$1609 $auto$rtlil.cc:2121:Not$1618 $auto$rtlil.cc:2121:Not$1616 $auto$opt_dff.cc:217:make_patterns_logic$1613 $auto$opt_dff.cc:217:make_patterns_logic$1611 }
+    New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1620: { $auto$rtlil.cc:2121:Not$1618 $auto$rtlil.cc:2121:Not$1616 $auto$opt_dff.cc:217:make_patterns_logic$1613 $auto$opt_dff.cc:217:make_patterns_logic$1611 $auto$opt_dff.cc:217:make_patterns_logic$1609 }
     New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1605: { $auto$opt_dff.cc:217:make_patterns_logic$1594 $auto$opt_dff.cc:217:make_patterns_logic$1596 $auto$opt_dff.cc:217:make_patterns_logic$1598 $auto$rtlil.cc:2121:Not$1601 $auto$rtlil.cc:2121:Not$1603 }
     New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1590: { $auto$opt_dff.cc:217:make_patterns_logic$1575 $auto$opt_dff.cc:217:make_patterns_logic$1577 $auto$opt_dff.cc:217:make_patterns_logic$1579 $auto$opt_dff.cc:217:make_patterns_logic$1581 $auto$opt_dff.cc:217:make_patterns_logic$1583 $auto$rtlil.cc:2121:Not$1586 $auto$rtlil.cc:2121:Not$1588 }
-    New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1571: { $auto$opt_dff.cc:217:make_patterns_logic$1556 $auto$opt_dff.cc:217:make_patterns_logic$1560 $auto$opt_dff.cc:217:make_patterns_logic$1562 $auto$opt_dff.cc:217:make_patterns_logic$1558 $auto$opt_dff.cc:217:make_patterns_logic$1564 $auto$rtlil.cc:2121:Not$1567 $auto$rtlil.cc:2121:Not$1569 }
+    New input vector for $reduce_and cell $auto$opt_dff.cc:243:make_patterns_logic$1571: { $auto$opt_dff.cc:217:make_patterns_logic$1558 $auto$opt_dff.cc:217:make_patterns_logic$1556 $auto$opt_dff.cc:217:make_patterns_logic$1562 $auto$opt_dff.cc:217:make_patterns_logic$1560 $auto$opt_dff.cc:217:make_patterns_logic$1564 $auto$rtlil.cc:2121:Not$1567 $auto$rtlil.cc:2121:Not$1569 }
     New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$546: { $flatten\control.\uart0.$procmux$513_CMP $flatten\control.\uart0.$procmux$430_CMP }
     New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$551: { $flatten\control.\uart0.$procmux$513_CMP $flatten\control.\uart0.$procmux$430_CMP }
     New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$561: { $flatten\control.\uart0.$procmux$513_CMP $flatten\control.\uart0.$procmux$430_CMP }
@@ -1282,8 +1278,8 @@ Setting constant 0-bit at position 7 on $auto$opt_dff.cc:702:run$1641 ($sdffce) 
 
 6.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \pulse_gen..
-Removed 26 unused cells and 42 unused wires.
-<suppressed ~31 debug messages>
+Removed 27 unused cells and 42 unused wires.
+<suppressed ~32 debug messages>
 
 6.13.22. Executing OPT_EXPR pass (perform const folding).
 Optimizing module pulse_gen.
@@ -1423,20 +1419,19 @@ Removed top 2 bits (of 3) from wire pulse_gen.$flatten\control.\uart0.$ternary$u
 Removed top 2 bits (of 3) from wire pulse_gen.$flatten\control.\uart0.$ternary$uart.v:226$162_Y.
 Removed top 1 bits (of 2) from wire pulse_gen.$flatten\control.\uart0.$ternary$uart.v:301$169_Y.
 Removed top 8 bits (of 32) from wire pulse_gen.$flatten\pulses.$sub$pulses.v:148$61_Y.
-Removed top 30 bits (of 32) from wire pulse_gen.$flatten\pulses.$sub$pulses.v:148$62_Y.
+Removed top 15 bits (of 32) from wire pulse_gen.$flatten\pulses.$sub$pulses.v:148$62_Y.
 Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:152$66_Y.
 Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:163$77_Y.
 Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:164$76_Y.
 Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:165$74_Y.
 Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:167$83_Y.
 Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:168$81_Y.
-Removed top 31 bits (of 32) from wire pulse_gen.$flatten\pulses.$ternary$pulses.v:170$85_Y.
 
 6.15. Executing PEEPOPT pass (run peephole optimizers).
 
 6.16. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \pulse_gen..
-Removed 0 unused cells and 62 unused wires.
+Removed 0 unused cells and 61 unused wires.
 <suppressed ~1 debug messages>
 
 6.17. Executing SHARE pass (SAT-based resource sharing).
@@ -1511,7 +1506,7 @@ Extracting $alu and $macc cells in module pulse_gen:
   creating $alu model for $macc $flatten\pulses.$sub$pulses.v:148$61.
   creating $alu model for $macc $flatten\pulses.$sub$pulses.v:148$62.
   creating $alu model for $macc $flatten\control.$add$pulse_control.v:146$23.
-  creating $macc cell for $flatten\control.$add$pulse_control.v:162$27: $auto$alumacc.cc:365:replace_macc$1906
+  creating $macc cell for $flatten\control.$add$pulse_control.v:162$27: $auto$alumacc.cc:365:replace_macc$1905
   creating $alu model for $flatten\pulses.$gt$pulses.v:138$57 ($gt): new $alu
   creating $alu model for $flatten\pulses.$lt$pulses.v:151$64 ($lt): new $alu
   creating $alu model for $flatten\pulses.$lt$pulses.v:152$65 ($lt): new $alu
@@ -1520,27 +1515,27 @@ Extracting $alu and $macc cells in module pulse_gen:
   creating $alu model for $flatten\pulses.$lt$pulses.v:165$72 ($lt): new $alu
   creating $alu model for $flatten\pulses.$lt$pulses.v:167$78 ($lt): new $alu
   creating $alu model for $flatten\pulses.$lt$pulses.v:168$79 ($lt): new $alu
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:168$79: $auto$alumacc.cc:485:replace_alu$1915
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:167$78: $auto$alumacc.cc:485:replace_alu$1920
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:165$72: $auto$alumacc.cc:485:replace_alu$1925
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:164$71: $auto$alumacc.cc:485:replace_alu$1930
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:163$70: $auto$alumacc.cc:485:replace_alu$1935
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:152$65: $auto$alumacc.cc:485:replace_alu$1940
-  creating $alu cell for $flatten\pulses.$lt$pulses.v:151$64: $auto$alumacc.cc:485:replace_alu$1945
-  creating $alu cell for $flatten\pulses.$gt$pulses.v:138$57: $auto$alumacc.cc:485:replace_alu$1950
-  creating $alu cell for $flatten\control.$add$pulse_control.v:146$23: $auto$alumacc.cc:485:replace_alu$1955
-  creating $alu cell for $flatten\pulses.$sub$pulses.v:148$62: $auto$alumacc.cc:485:replace_alu$1958
-  creating $alu cell for $flatten\pulses.$sub$pulses.v:148$61: $auto$alumacc.cc:485:replace_alu$1961
-  creating $alu cell for $flatten\control.\uart0.$add$uart.v:189$153: $auto$alumacc.cc:485:replace_alu$1964
-  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:145$146: $auto$alumacc.cc:485:replace_alu$1967
-  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:149$148: $auto$alumacc.cc:485:replace_alu$1970
-  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:192$154: $auto$alumacc.cc:485:replace_alu$1973
-  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:210$159: $auto$alumacc.cc:485:replace_alu$1976
-  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:283$167: $auto$alumacc.cc:485:replace_alu$1979
-  creating $alu cell for $flatten\pulses.$add$pulses.v:127$47: $auto$alumacc.cc:485:replace_alu$1982
-  creating $alu cell for $flatten\pulses.$add$pulses.v:128$49: $auto$alumacc.cc:485:replace_alu$1985
-  creating $alu cell for $flatten\pulses.$add$pulses.v:129$52: $auto$alumacc.cc:485:replace_alu$1988
-  creating $alu cell for $flatten\pulses.$sub$pulses.v:129$53: $auto$alumacc.cc:485:replace_alu$1991
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:168$79: $auto$alumacc.cc:485:replace_alu$1914
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:167$78: $auto$alumacc.cc:485:replace_alu$1919
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:165$72: $auto$alumacc.cc:485:replace_alu$1924
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:164$71: $auto$alumacc.cc:485:replace_alu$1929
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:163$70: $auto$alumacc.cc:485:replace_alu$1934
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:152$65: $auto$alumacc.cc:485:replace_alu$1939
+  creating $alu cell for $flatten\pulses.$lt$pulses.v:151$64: $auto$alumacc.cc:485:replace_alu$1944
+  creating $alu cell for $flatten\pulses.$gt$pulses.v:138$57: $auto$alumacc.cc:485:replace_alu$1949
+  creating $alu cell for $flatten\control.$add$pulse_control.v:146$23: $auto$alumacc.cc:485:replace_alu$1954
+  creating $alu cell for $flatten\pulses.$sub$pulses.v:148$62: $auto$alumacc.cc:485:replace_alu$1957
+  creating $alu cell for $flatten\pulses.$sub$pulses.v:148$61: $auto$alumacc.cc:485:replace_alu$1960
+  creating $alu cell for $flatten\control.\uart0.$add$uart.v:189$153: $auto$alumacc.cc:485:replace_alu$1963
+  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:145$146: $auto$alumacc.cc:485:replace_alu$1966
+  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:149$148: $auto$alumacc.cc:485:replace_alu$1969
+  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:192$154: $auto$alumacc.cc:485:replace_alu$1972
+  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:210$159: $auto$alumacc.cc:485:replace_alu$1975
+  creating $alu cell for $flatten\control.\uart0.$sub$uart.v:283$167: $auto$alumacc.cc:485:replace_alu$1978
+  creating $alu cell for $flatten\pulses.$add$pulses.v:127$47: $auto$alumacc.cc:485:replace_alu$1981
+  creating $alu cell for $flatten\pulses.$add$pulses.v:128$49: $auto$alumacc.cc:485:replace_alu$1984
+  creating $alu cell for $flatten\pulses.$add$pulses.v:129$52: $auto$alumacc.cc:485:replace_alu$1987
+  creating $alu cell for $flatten\pulses.$sub$pulses.v:129$53: $auto$alumacc.cc:485:replace_alu$1990
   created 21 $alu and 1 $macc cells.
 
 6.23. Executing OPT pass (performing simple optimizations).
@@ -1563,8 +1558,8 @@ Removed 0 multiplexer ports.
 
 6.23.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \pulse_gen.
-    New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$907: { $flatten\control.\uart0.$procmux$681_CMP $auto$opt_reduce.cc:134:opt_mux$1995 }
-    New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$916: { $flatten\control.\uart0.$procmux$681_CMP $auto$opt_reduce.cc:134:opt_mux$1997 }
+    New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$907: { $flatten\control.\uart0.$procmux$681_CMP $auto$opt_reduce.cc:134:opt_mux$1994 }
+    New ctrl vector for $pmux cell $flatten\control.\uart0.$procmux$916: { $flatten\control.\uart0.$procmux$681_CMP $auto$opt_reduce.cc:134:opt_mux$1996 }
   Optimizing cells in module \pulse_gen.
 Performed a total of 2 changes.
 
@@ -1662,7 +1657,7 @@ No more expansions possible.
 
 6.30.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module pulse_gen.
-<suppressed ~52 debug messages>
+<suppressed ~53 debug messages>
 
 6.30.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\pulse_gen'.
@@ -1963,16 +1958,16 @@ Finding identical cells in module `\pulse_gen'.
 Removed a total of 145 cells.
 
 6.34.3. Executing OPT_DFF pass (perform DFF optimizations).
+Handling D = Q on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2096 ($_SDFFCE_PP0P_) from module pulse_gen (conecting SRST instead).
+Setting constant 0-bit at position 0 on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2096 ($_SDFFCE_PP0P_) from module pulse_gen.
 Handling D = Q on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2097 ($_SDFFCE_PP0P_) from module pulse_gen (conecting SRST instead).
 Setting constant 0-bit at position 0 on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2097 ($_SDFFCE_PP0P_) from module pulse_gen.
 Handling D = Q on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2098 ($_SDFFCE_PP0P_) from module pulse_gen (conecting SRST instead).
 Setting constant 0-bit at position 0 on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2098 ($_SDFFCE_PP0P_) from module pulse_gen.
-Handling D = Q on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2099 ($_SDFFCE_PP0P_) from module pulse_gen (conecting SRST instead).
-Setting constant 0-bit at position 0 on $auto$simplemap.cc:559:simplemap_adffe_sdffe_sdffce$2099 ($_SDFFCE_PP0P_) from module pulse_gen.
 
 6.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \pulse_gen..
-Removed 632 unused cells and 1556 unused wires.
+Removed 632 unused cells and 1555 unused wires.
 <suppressed ~633 debug messages>
 
 6.34.5. Rerunning OPT passes. (Removed registers in this run.)
@@ -1987,15 +1982,15 @@ Finding identical cells in module `\pulse_gen'.
 Removed a total of 91 cells.
 
 6.34.8. Executing OPT_DFF pass (perform DFF optimizations).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$4489 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.$procmux$1267.Y_B [1], Q = \control.state [1], rval = 1'0).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$4488 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.$procmux$1267.B_AND_S [4], Q = \control.state [0], rval = 1'0).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2263 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$871.Y_B [2], Q = \control.uart0.recv_state [2], rval = 1'0).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2262 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$871.Y_B [1], Q = \control.uart0.recv_state [1], rval = 1'0).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2261 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$871.Y_B [0], Q = \control.uart0.recv_state [0], rval = 1'1).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2208 ($_DFFE_PP_) from module pulse_gen (D = \control.uart0.rx_samples [2], Q = \control.uart0.rx_data [7], rval = 1'1).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2167 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$556.Y_B [1], Q = \control.uart0.tx_state [1], rval = 1'0).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2166 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$556.Y_B [0], Q = \control.uart0.tx_state [0], rval = 1'1).
-Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2140 ($_DFFE_PP_) from module pulse_gen (D = $flatten\pulses.$procmux$1074.B_AND_S [0], Q = \pulses.sync, rval = 1'1).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$4496 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.$procmux$1267.Y_B [1], Q = \control.state [1], rval = 1'0).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$4495 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.$procmux$1267.B_AND_S [4], Q = \control.state [0], rval = 1'0).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2262 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$871.Y_B [2], Q = \control.uart0.recv_state [2], rval = 1'0).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2261 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$871.Y_B [1], Q = \control.uart0.recv_state [1], rval = 1'0).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2260 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$871.Y_B [0], Q = \control.uart0.recv_state [0], rval = 1'1).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2207 ($_DFFE_PP_) from module pulse_gen (D = \control.uart0.rx_samples [2], Q = \control.uart0.rx_data [7], rval = 1'1).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2166 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$556.Y_B [1], Q = \control.uart0.tx_state [1], rval = 1'0).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2165 ($_DFFE_PP_) from module pulse_gen (D = $flatten\control.\uart0.$procmux$556.Y_B [0], Q = \control.uart0.tx_state [0], rval = 1'1).
+Adding SRST signal on $auto$simplemap.cc:442:simplemap_dffe$2139 ($_DFFE_PP_) from module pulse_gen (D = $flatten\pulses.$procmux$1074.B_AND_S [0], Q = \pulses.sync, rval = 1'1).
 
 6.34.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \pulse_gen..
@@ -2093,7 +2088,6 @@ Generating RTLIL representation for module `\OLVDS'.
 Successfully finished Verilog frontend.
 
 6.37.2. Continuing TECHMAP pass.
-Using template $paramod\$_DFFE_PN_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFFE_PN_.
 Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFF_P_.
 Using template $paramod\$_DFFE_PP_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFFE_PP_.
 Using template $paramod\$_DFFE_PP_\_TECHMAP_WIREINIT_Q_=1'0 for cells of type $_DFFE_PP_.
@@ -2102,6 +2096,7 @@ Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'1 for cells of type $_DF
 Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'0 for cells of type $_DFF_P_.
 Using template $paramod\$_DFFE_PP_\_TECHMAP_WIREINIT_Q_=1'1 for cells of type $_DFFE_PP_.
 Using template \$_SDFFE_PP0P_ for cells of type $_SDFFE_PP0P_.
+Using template $paramod\$_DFFE_PN_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFFE_PN_.
 Using template \$_SDFFE_PP1P_ for cells of type $_SDFFE_PP1P_.
 Using template \$_SDFFE_PP0N_ for cells of type $_SDFFE_PP0N_.
 No more expansions possible.
@@ -2156,22 +2151,22 @@ ABC: + dch -f
 ABC: + if 
 ABC: + mfs2 
 ABC: + dress 
-ABC: Total number of equiv classes                =     187.
-ABC: Participating nodes from both networks       =     442.
-ABC: Participating nodes from the first network   =     196. (  71.53 % of nodes)
-ABC: Participating nodes from the second network  =     246. (  89.78 % of nodes)
-ABC: Node pairs (any polarity)                    =     196. (  71.53 % of names can be moved)
-ABC: Node pairs (same polarity)                   =     186. (  67.88 % of names can be moved)
-ABC: Total runtime =     0.02 sec
+ABC: Total number of equiv classes                =     184.
+ABC: Participating nodes from both networks       =     432.
+ABC: Participating nodes from the first network   =     193. (  70.96 % of nodes)
+ABC: Participating nodes from the second network  =     239. (  87.87 % of nodes)
+ABC: Node pairs (any polarity)                    =     193. (  70.96 % of names can be moved)
+ABC: Node pairs (same polarity)                   =     183. (  67.28 % of names can be moved)
+ABC: Total runtime =     0.01 sec
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 6.44.1.2. Re-integrating ABC results.
-ABC RESULTS:              $lut cells:      273
+ABC RESULTS:              $lut cells:      271
 ABC RESULTS:        internal signals:      767
 ABC RESULTS:           input signals:      196
 ABC RESULTS:          output signals:      175
 Removing temp directory.
-Removed 0 unused cells and 612 unused wires.
+Removed 0 unused cells and 613 unused wires.
 
 6.45. Executing TECHMAP pass (map to technology primitives).
 
@@ -2248,29 +2243,30 @@ Using template $paramod$746424d0983081829316163db34337ccf8ceb1ee\$lut for cells 
 Using template $paramod\$lut\WIDTH=4\LUT=16'0000000000000001 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0111111100000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'10000000100000001000000011111111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'10000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=2\LUT=4'0100 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'11101111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=16777216 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'11110001 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'0000101100000000 for cells of type $lut.
-Using template $paramod$b5cd238a527d851ba52055b76f8b8313ff4d0a1d\$lut for cells of type $lut.
-Using template $paramod$0d7a58a2521c9f7f639d5074fac2fc6fc0481634\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'0001 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'01000000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'1000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'1110 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'00010000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'1011 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'00001110 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'0000000001001111 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'00000001 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1111111000000001 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1010000000111111 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=32'11111111111111110000000000000001 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1111111100000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=32'11111111111111110000000000000001 for cells of type $lut.
+Using template $paramod$f275b2d97237f5f7d3462ef47444def2125c8869\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000101100000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011110100 for cells of type $lut.
+Using template $paramod$b5cd238a527d851ba52055b76f8b8313ff4d0a1d\$lut for cells of type $lut.
+Using template $paramod$1929d44748517239e36a599c0facfb62ddb99607\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=32'11000000010101011111111111000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1000000000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=65536 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011101111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=32'11111111111111111000000000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1010000000111111 for cells of type $lut.
 Using template $paramod$43d36707918893cdc94f3173e86faa45633b8ce7\$lut for cells of type $lut.
 Using template $paramod\$lut\WIDTH=2\LUT=4'1001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111111000000001 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0100000000000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0000000100000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0000011100111100 for cells of type $lut.
@@ -2278,164 +2274,166 @@ Using template $paramod\$lut\WIDTH=4\LUT=16'1100111110100000 for cells of type $
 Using template $paramod\$lut\WIDTH=3\LUT=8'10101100 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'11110100 for cells of type $lut.
 Using template $paramod$2ddb5b5cad1eda4b448691edd161080bb92bfe50\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1100111111111110 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'10111100 for cells of type $lut.
-Using template $paramod$d15f39da4cdda7162c5b1d8de7c7e77e72dbe4aa\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=33023 for cells of type $lut.
+Using template $paramod$89a7c44637a153ae876a5df3b846d5543893af1c\$lut for cells of type $lut.
+Using template $paramod$fcd45dac87ecaf8167f012f6f6d6fa7b369dedb8\$lut for cells of type $lut.
+Using template $paramod$d692d9d35dc00ef9c20c35047a1963486faa6ab4\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00001110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111111110000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'00001011 for cells of type $lut.
-Using template $paramod$74303b63fa170e00cba212e866b4c6c39b46b2d1\$lut for cells of type $lut.
 Using template $paramod$8eb650ca06c3ab380e4e78feeef63d4495d1b17b\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'01111000 for cells of type $lut.
+Using template $paramod$74303b63fa170e00cba212e866b4c6c39b46b2d1\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0110 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'10010110 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'11111110111010101010100010000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'11101000000101110001011111101000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=1\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11101111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'11000010 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'01110000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1001011000000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0110100110010110 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'0110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1001011001101001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1110100000010111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0111111110000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01111000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'11100001 for cells of type $lut.
 Using template $paramod$629bea346f0daddb39cb1ebf17c36b3d1144d5d1\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'10110000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1000000011111111 for cells of type $lut.
-Using template $paramod$89a7c44637a153ae876a5df3b846d5543893af1c\$lut for cells of type $lut.
-Using template $paramod$fcd45dac87ecaf8167f012f6f6d6fa7b369dedb8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=33023 for cells of type $lut.
+Using template $paramod$d15f39da4cdda7162c5b1d8de7c7e77e72dbe4aa\$lut for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0100111100000000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011110100 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=32'11101111000011110000111100001111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'11111111100000000000000000000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1111111111110001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'10111100 for cells of type $lut.
 Using template $paramod$d544e1f300ff74c4dad472b8a1469bb47c58f1ad\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1111111110000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=32'10101100110011001111111111111111 for cells of type $lut.
 Using template $paramod$d611654eaf2cfdde5476b49ff7dde7a3d8cbca2c\$lut for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1011111100000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1110 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'11111111010100110000000011111111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111111100000111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0111000011111111 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1000000000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1011 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'00011100 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'10000000000000000000000000000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=3\LUT=8'11100000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'1100110111111100 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011101111 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=65536 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0001000000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000000001101 for cells of type $lut.
 Using template $paramod$b1bd2a921ec0f1ea0cc7578a2bcf32d761c7f62f\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000001001111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=5\LUT=32'11010000000000000000000000000000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=32'11111111111111111000000000000000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=32'11000000010101011111111111000000 for cells of type $lut.
-Using template $paramod$f275b2d97237f5f7d3462ef47444def2125c8869\$lut for cells of type $lut.
 No more expansions possible.
-<suppressed ~1385 debug messages>
+<suppressed ~1422 debug messages>
 
 6.46. Executing OPT_LUT_INS pass (discard unused LUT inputs).
 Optimizing LUTs in pulse_gen.
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7963.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7963.lut4 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7963.lut5 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7963.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7995.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7993.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7993.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8025.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8025.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut2 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut3 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut4 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut5 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut6 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut4 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut5 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut4 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut5 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8067.lut1 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8067.lut2 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8067.lut3 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8065.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8068.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8097.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8104.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8109.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8109.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut4 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut5 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8106.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut4 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut5 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8086.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8086.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8066.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8014.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8014.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut5 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7937.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut2 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut3 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut4 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut5 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut6 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut7 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7963.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7937.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7941.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7942.lut1 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7937.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7954.lut1 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7963.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7968.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7965.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7947.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7981.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7991.lut0 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$7993.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8004.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8014.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8021.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8025.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8049.lut0 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut1 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8064.lut0 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8072.lut0 (4 -> 3)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8076.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8077.lut0 (4 -> 1)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8073.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8086.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8090.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8097.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8097.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8104.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8102.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8104.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8106.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8109.lut0 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8106.lut1 (4 -> 0)
-  Optimizing lut $abc$7935$auto$blifparse.cc:498:parse_blif$8112.lut0 (4 -> 0)
-Removed 0 unused cells and 573 unused wires.
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7991.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7991.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8024.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8024.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut2 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut3 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut4 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut5 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut6 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut4 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut5 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut6 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8094.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8084.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8084.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8087.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8106.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8106.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut4 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut5 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut6 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8103.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut4 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut5 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut6 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8101.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8077.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut4 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut5 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut6 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8066.lut2 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8066.lut3 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8064.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8067.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8065.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8013.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8013.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7946.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7952.lut1 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7936.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7936.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7961.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7961.lut4 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7961.lut5 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7961.lut6 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7962.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut2 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut3 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut4 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut5 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut6 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut7 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7936.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7940.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7941.lut1 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7946.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7951.lut1 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7961.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7963.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7961.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7979.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8066.lut1 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7946.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7989.lut0 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7991.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8002.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$7993.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8013.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8020.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8024.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8048.lut0 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut1 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8063.lut0 (4 -> 1)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8072.lut0 (4 -> 3)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8073.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8076.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8077.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8094.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8077.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8086.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8094.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8084.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8099.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8103.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8101.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8103.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8101.lut1 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8106.lut0 (4 -> 0)
+  Optimizing lut $abc$7934$auto$blifparse.cc:498:parse_blif$8109.lut0 (4 -> 0)
+Removed 0 unused cells and 568 unused wires.
 
 6.47. Executing AUTONAME pass.
-Renamed 16374 objects in module pulse_gen (79 iterations).
-<suppressed ~1628 debug messages>
+Renamed 16550 objects in module pulse_gen (83 iterations).
+<suppressed ~1621 debug messages>
 
 6.48. Executing HIERARCHY pass (managing design hierarchy).
 
@@ -2450,18 +2448,18 @@ Removed 0 unused modules.
 
 === pulse_gen ===
 
-   Number of wires:                617
-   Number of wire bits:           2665
-   Number of public wires:         617
-   Number of public wire bits:    2665
+   Number of wires:                614
+   Number of wire bits:           2657
+   Number of public wires:         614
+   Number of public wire bits:    2657
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               1135
+   Number of cells:               1131
      CCU2C                         142
      EHXPLLL                         1
-     L6MUX21                        43
-     LUT4                          399
+     L6MUX21                        42
+     LUT4                          396
      PFUMX                          90
      TRELLIS_FF                    460
 
@@ -2472,16 +2470,16 @@ found and reported 0 problems.
 6.51. Executing JSON backend.
 
 Warnings: 64 unique messages, 64 total
-End of script. Logfile hash: 65479827c7, CPU: user 4.88s system 0.44s, MEM: 251.07 MB peak
+End of script. Logfile hash: 861805a27e, CPU: user 3.47s system 0.17s, MEM: 251.09 MB peak
 Yosys 0.9+3578 (git sha1 ed579038, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 20% 18x read_verilog (1 sec), 15% 8x techmap (0 sec), ...
+Time spent: 19% 18x read_verilog (0 sec), 15% 8x techmap (0 sec), ...
 nextpnr-ecp5 --pre-pack clk_constraint.py --json pulse_gen.json --textcfg pulse_gen_out.config --um5g-85k --package CABGA381 --lpf ecp5.lpf
 Info: constraining clock net 'clk' to 50.00 MHz
 Info: constraining clock net 'clk_pll' to 200.00 MHz
 
 Info: Logic utilisation before packing:
-Info:     Total LUT4s:       683/83640     0%
-Info:         logic LUTs:    399/83640     0%
+Info:     Total LUT4s:       680/83640     0%
+Info:         logic LUTs:    396/83640     0%
 Info:         carry LUTs:    284/83640     0%
 Info:           RAM LUTs:      0/41820     0%
 Info:          RAMW LUTs:      0/20910     0%
@@ -2509,13 +2507,13 @@ Info:     Input frequency of PLL 'ecppll.pll_i' is constrained to 50.0 MHz
 Info: Promoting globals...
 Info:     promoting clock net clk$TRELLIS_IO_IN to global network
 Info:     promoting clock net clk_pll to global network
-Info: Checksum: 0x31b89f53
+Info: Checksum: 0x0a080065
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0xb27d4733
+Info: Checksum: 0xefc884a7
 
 Info: Device utilisation:
-Info: 	       TRELLIS_SLICE:   638/41820     1%
+Info: 	       TRELLIS_SLICE:   637/41820     1%
 Info: 	          TRELLIS_IO:     7/  365     1%
 Info: 	                DCCA:     2/   56     3%
 Info: 	              DP16KD:     0/  208     0%
@@ -2542,438 +2540,472 @@ Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
 Info: 	        ECLKBRIDGECS:     0/    2     0%
 
 Info: Placed 8 cells based on constraints.
-Info: Creating initial analytic placement for 436 cells, random placement wirelen = 73190.
-Info:     at initial placer iter 0, wirelen = 1026
-Info:     at initial placer iter 1, wirelen = 821
-Info:     at initial placer iter 2, wirelen = 813
-Info:     at initial placer iter 3, wirelen = 821
+Info: Creating initial analytic placement for 436 cells, random placement wirelen = 65050.
+Info:     at initial placer iter 0, wirelen = 1095
+Info:     at initial placer iter 1, wirelen = 833
+Info:     at initial placer iter 2, wirelen = 810
+Info:     at initial placer iter 3, wirelen = 824
 Info: Running main analytical placer.
-Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 813, spread = 5976, legal = 6249; time = 0.07s
-Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 968, spread = 3981, legal = 4268; time = 0.07s
-Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 1080, spread = 3921, legal = 4204; time = 0.09s
-Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 1211, spread = 3661, legal = 3987; time = 0.06s
-Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 1361, spread = 4084, legal = 4356; time = 0.03s
-Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 1511, spread = 3485, legal = 3814; time = 0.03s
-Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 1604, spread = 3656, legal = 3970; time = 0.03s
-Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 1773, spread = 3411, legal = 3776; time = 0.03s
-Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 1875, spread = 3261, legal = 3688; time = 0.03s
-Info:     at iteration #10, type TRELLIS_SLICE: wirelen solved = 1840, spread = 3283, legal = 3691; time = 0.02s
-Info:     at iteration #11, type TRELLIS_SLICE: wirelen solved = 1931, spread = 3262, legal = 3710; time = 0.03s
-Info:     at iteration #12, type TRELLIS_SLICE: wirelen solved = 2019, spread = 3351, legal = 3715; time = 0.05s
-Info:     at iteration #13, type TRELLIS_SLICE: wirelen solved = 2070, spread = 3294, legal = 3697; time = 0.04s
-Info:     at iteration #14, type TRELLIS_SLICE: wirelen solved = 2181, spread = 3393, legal = 3837; time = 0.03s
-Info: HeAP Placer Time: 0.98s
-Info:   of which solving equations: 0.58s
-Info:   of which spreading cells: 0.06s
-Info:   of which strict legalisation: 0.03s
+Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 810, spread = 6144, legal = 6380; time = 0.04s
+Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 1069, spread = 4081, legal = 4354; time = 0.04s
+Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 1142, spread = 3891, legal = 4163; time = 0.03s
+Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 1258, spread = 3519, legal = 3901; time = 0.03s
+Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 1345, spread = 3529, legal = 3885; time = 0.03s
+Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 1488, spread = 3483, legal = 3763; time = 0.05s
+Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 1718, spread = 3346, legal = 3726; time = 0.02s
+Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 1744, spread = 3324, legal = 3685; time = 0.03s
+Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 1778, spread = 3366, legal = 3632; time = 0.02s
+Info:     at iteration #10, type TRELLIS_SLICE: wirelen solved = 1881, spread = 3615, legal = 3833; time = 0.03s
+Info:     at iteration #11, type TRELLIS_SLICE: wirelen solved = 2040, spread = 3253, legal = 3695; time = 0.03s
+Info:     at iteration #12, type TRELLIS_SLICE: wirelen solved = 2058, spread = 3369, legal = 3757; time = 0.03s
+Info:     at iteration #13, type TRELLIS_SLICE: wirelen solved = 1997, spread = 3880, legal = 4225; time = 0.03s
+Info:     at iteration #14, type TRELLIS_SLICE: wirelen solved = 2247, spread = 3645, legal = 3846; time = 0.03s
+Info: HeAP Placer Time: 0.64s
+Info:   of which solving equations: 0.39s
+Info:   of which spreading cells: 0.04s
+Info:   of which strict legalisation: 0.02s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 75, wirelen = 3688
-Info:   at iteration #5: temp = 0.000000, timing cost = 69, wirelen = 3216
-Info:   at iteration #10: temp = 0.000000, timing cost = 67, wirelen = 3083
-Info:   at iteration #15: temp = 0.000000, timing cost = 74, wirelen = 3032
-Info:   at iteration #17: temp = 0.000000, timing cost = 66, wirelen = 3029 
-Info: SA placement time 0.81s
+Info:   at iteration #1: temp = 0.000000, timing cost = 84, wirelen = 3632
+Info:   at iteration #5: temp = 0.000000, timing cost = 76, wirelen = 3175
+Info:   at iteration #10: temp = 0.000000, timing cost = 83, wirelen = 3079
+Info:   at iteration #15: temp = 0.000000, timing cost = 82, wirelen = 3002
+Info:   at iteration #20: temp = 0.000000, timing cost = 81, wirelen = 2958
+Info:   at iteration #23: temp = 0.000000, timing cost = 81, wirelen = 2953 
+Info: SA placement time 0.82s
 
-Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 168.98 MHz (PASS at 50.00 MHz)
-Info: Max frequency for clock           '$glbnet$clk_pll': 284.90 MHz (PASS at 200.00 MHz)
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 162.26 MHz (PASS at 50.00 MHz)
+Info: Max frequency for clock           '$glbnet$clk_pll': 312.99 MHz (PASS at 200.00 MHz)
 
-Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 11.44 ns
-Info: Max delay <async>                           -> posedge $glbnet$clk_pll          : 9.45 ns
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 9.38 ns
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> posedge $glbnet$clk_pll          : 3.75 ns
-Info: Max delay posedge $glbnet$clk_pll           -> <async>                          : 2.31 ns
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 11.32 ns
+Info: Max delay <async>                           -> posedge $glbnet$clk_pll          : 8.88 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 9.11 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> posedge $glbnet$clk_pll          : 3.74 ns
+Info: Max delay posedge $glbnet$clk_pll           -> <async>                          : 2.04 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 4 endpoint(s)
-Info:          + represents [1,4) endpoint(s)
-Info: [ -4452,   -167) |******+
-Info: [  -167,   4118) |************+
-Info: [  4118,   8403) | 
-Info: [  8403,  12688) |**********+
-Info: [ 12688,  16973) |************************************************************ 
-Info: [ 16973,  21258) |***********************************************+
-Info: [ 21258,  25543) | 
-Info: [ 25543,  29828) | 
-Info: [ 29828,  34113) | 
-Info: [ 34113,  38398) | 
-Info: [ 38398,  42683) | 
-Info: [ 42683,  46968) | 
-Info: [ 46968,  51253) | 
-Info: [ 51253,  55538) | 
-Info: [ 55538,  59823) | 
-Info: [ 59823,  64108) | 
-Info: [ 64108,  68393) | 
-Info: [ 68393,  72678) | 
-Info: [ 72678,  76963) |+
-Info: [ 76963,  81248) |+
-Info: Checksum: 0x1d8f2f0a
+Info:  legend: * represents 5 endpoint(s)
+Info:          + represents [1,5) endpoint(s)
+Info: [ -3878,    397) |******+
+Info: [   397,   4672) |***********+
+Info: [  4672,   8947) |+
+Info: [  8947,  13222) |*********+
+Info: [ 13222,  17497) |************************************************************ 
+Info: [ 17497,  21772) |*****************************************+
+Info: [ 21772,  26047) | 
+Info: [ 26047,  30322) | 
+Info: [ 30322,  34597) | 
+Info: [ 34597,  38872) | 
+Info: [ 38872,  43147) | 
+Info: [ 43147,  47422) | 
+Info: [ 47422,  51697) | 
+Info: [ 51697,  55972) | 
+Info: [ 55972,  60247) | 
+Info: [ 60247,  64522) | 
+Info: [ 64522,  68797) | 
+Info: [ 68797,  73072) | 
+Info: [ 73072,  77347) |+
+Info: [ 77347,  81622) |+
+Info: Checksum: 0xfba21345
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
 Info:     routing clock net $glbnet$clk_pll using global 1
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 2618 arcs.
+Info: Routing 2608 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |        5        994 |    5   994 |      1625|       0.90       0.90|
-Info:       2000 |       11       1988 |    6   994 |       634|       0.54       1.43|
-Info:       2644 |       19       2625 |    8   637 |         0|       0.87       2.30|
+Info:       1000 |        0        999 |    0   999 |      1609|       0.37       0.37|
+Info:       2000 |        3       1996 |    3   997 |       612|       0.37       0.74|
+Info:       2622 |       11       2611 |    8   615 |         0|       0.67       1.40|
 Info: Routing complete.
-Info: Router1 time 2.30s
-Info: Checksum: 0xfafdbda2
+Info: Router1 time 1.40s
+Info: Checksum: 0xa5ba50cc
 
 Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
 Info: curr total
-Info:  0.3  0.3  Source control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_4_SLICE.Q0
-Info:  0.9  1.2    Net control.uart0.rx_clk[9] budget 2.909000 ns (102,39) -> (105,38)
-Info:                Sink RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_SLICE.B0
+Info:  0.3  0.3  Source pulses.p1width_TRELLIS_FF_Q_15_SLICE.Q0
+Info:  1.0  1.3    Net pulses.p1width[0] budget 3.472000 ns (113,40) -> (112,38)
+Info:                Sink pulses.delay_CCU2C_A0_15$CCU2_SLICE.B0
 Info:                Defined in:
-Info:                  pulse_gen.v:59.16-76.4
-Info:                  uart.v:98.39-98.45
-Info:                  pulse_control.v:78.7-90.4
-Info:  0.2  1.4  Source RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX0
-Info:  0.0  1.4    Net RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D0_L6MUX21_Z_D0 budget 0.000000 ns (105,38) -> (105,38)
-Info:                Sink RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXA
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:70.20-70.27
+Info:  0.3  1.5  Source pulses.delay_CCU2C_A0_15$CCU2_SLICE.FCO
+Info:  0.0  1.5    Net pulses.delay_CCU2C_A0_12_COUT[1] budget 0.000000 ns (112,38) -> (112,38)
+Info:                Sink pulses.delay_CCU2C_A0_11$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.50-158.52
-Info:  0.1  1.6  Source RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.0  1.6    Net RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D0 budget 0.000000 ns (105,38) -> (105,38)
-Info:                Sink RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXA
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:127.14-127.29
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.3  1.8  Source pulses.delay_CCU2C_A0_11$CCU2_SLICE.F0
+Info:  1.0  2.8    Net pulses.p2width_CCU2C_A0_B0[2] budget 3.472000 ns (112,38) -> (109,40)
+Info:                Sink pulses.p2width_CCU2C_A0_3$CCU2_SLICE.B0
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.66-158.68
-Info:  0.1  1.7  Source RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_CCU2C_S0_S1_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
-Info:  1.4  3.1    Net RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD[2] budget 2.908000 ns (105,38) -> (106,40)
-Info:                Sink RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_LUT4_D_1_SLICE.A1
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:127.14-127.29
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:  0.3  3.1  Source pulses.p2width_CCU2C_A0_3$CCU2_SLICE.FCO
+Info:  0.0  3.1    Net pulses.p2width_CCU2C_A0_4_COUT[3] budget 0.000000 ns (109,40) -> (109,40)
+Info:                Sink pulses.p2width_CCU2C_A0_2$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  3.2  Source RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_LUT4_D_1_SLICE.F1
-Info:  0.8  4.0    Net RS232_Rx_LUT4_C_Z_L6MUX21_Z_1_SD_LUT4_D_Z[1] budget 2.908000 ns (106,40) -> (104,41)
-Info:                Sink RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.B0
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:128.16-128.41
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.0  3.2  Source pulses.p2width_CCU2C_A0_2$CCU2_SLICE.FCO
+Info:  0.0  3.2    Net pulses.p2width_CCU2C_A0_4_COUT[5] budget 0.000000 ns (109,40) -> (110,40)
+Info:                Sink pulses.p2width_CCU2C_A0_1$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.2  4.2  Source RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX0
-Info:  0.0  4.2    Net RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D0 budget 0.000000 ns (104,41) -> (104,41)
-Info:                Sink RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXA
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:128.16-128.41
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.0  3.2  Source pulses.p2width_CCU2C_A0_1$CCU2_SLICE.FCO
+Info:  0.0  3.2    Net pulses.p2width_CCU2C_A0_4_COUT[7] budget 0.000000 ns (110,40) -> (110,40)
+Info:                Sink pulses.p2width_CCU2C_A0$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.58-158.60
-Info:  0.1  4.4  Source RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.0  4.4    Net RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1 budget 0.000000 ns (104,41) -> (104,41)
-Info:                Sink RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXB
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:128.16-128.41
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.3  3.5  Source pulses.p2width_CCU2C_A0$CCU2_SLICE.F1
+Info:  1.0  4.5    Net pulses.p2width_CCU2C_A0_S0[9] budget 3.472000 ns (110,40) -> (110,37)
+Info:                Sink pulses.delay_CCU2C_A0$CCU2_SLICE.B1
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.70-158.72
-Info:  0.1  4.5  Source RS232_Rx_LUT4_A_1_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
-Info:  1.1  5.7    Net RS232_Rx_LUT4_A_1_Z[4] budget 3.591000 ns (104,41) -> (104,38)
-Info:                Sink control.uart0.rx_data_TRELLIS_FF_Q_7_LSR_LUT4_Z_SLICE.B0
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:128.16-128.41
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:  0.3  4.8  Source pulses.delay_CCU2C_A0$CCU2_SLICE.FCO
+Info:  0.0  4.8    Net pulses.delay_CCU2C_A0_4_COUT[9] budget 0.000000 ns (110,37) -> (110,37)
+Info:                Sink pulses.delay_CCU2C_A0_6$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  5.8  Source control.uart0.rx_data_TRELLIS_FF_Q_7_LSR_LUT4_Z_SLICE.F0
-Info:  0.6  6.4    Net control.uart0.rx_data_TRELLIS_FF_Q_7_LSR budget 3.591000 ns (104,38) -> (104,35)
-Info:                Sink control.uart0.rx_data_TRELLIS_FF_Q_7_SLICE.LSR
-Info:  0.2  6.6  Setup control.uart0.rx_data_TRELLIS_FF_Q_7_SLICE.LSR
-Info: 1.9 ns logic, 4.8 ns routing
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:129.16-129.49
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.0  4.8  Source pulses.delay_CCU2C_A0_6$CCU2_SLICE.FCO
+Info:  0.0  4.8    Net pulses.delay_CCU2C_A0_4_COUT[11] budget 0.000000 ns (110,37) -> (110,37)
+Info:                Sink pulses.delay_CCU2C_A0_5$CCU2_SLICE.FCI
+Info:                Defined in:
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:129.16-129.49
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.3  5.1  Source pulses.delay_CCU2C_A0_5$CCU2_SLICE.F0
+Info:  1.0  6.0    Net pulses.pulse_block_CCU2C_B0_A0[12] budget 3.471000 ns (110,37) -> (111,35)
+Info:                Sink pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_SLICE.A0
+Info:                Defined in:
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:129.16-129.49
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:  0.3  6.3  Source pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_2$CCU2_SLICE.FCO
+Info:  0.0  6.3    Net pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_1_COUT[13] budget 0.000000 ns (111,35) -> (112,35)
+Info:                Sink pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_SLICE.FCI
+Info:                Defined in:
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:129.16-129.63
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.3  6.6  Source pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_SLICE.F1
+Info:  0.1  6.7    Net pulses.block_off_TRELLIS_FF_Q_DI[15] budget 3.471000 ns (112,35) -> (112,35)
+Info:                Sink pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_SLICE.DI1
+Info:                Defined in:
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:129.16-129.63
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:  0.0  6.7  Setup pulses.block_off_TRELLIS_FF_Q_DI_CCU2C_S0_1$CCU2_SLICE.DI1
+Info: 2.6 ns logic, 4.1 ns routing
 
 Info: Critical path report for clock '$glbnet$clk_pll' (posedge -> posedge):
 Info: curr total
-Info:  0.3  0.3  Source pulses.nutation_pulse_width_CCU2C_B0_1$CCU2_SLICE.Q1
-Info:  0.9  1.2    Net pulses.nutation_pulse_start[5] budget 0.000000 ns (107,32) -> (107,35)
-Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.B1
+Info:  0.3  0.3  Source pulses.nutation_pulse_width_CCU2C_B0_3$CCU2_SLICE.Q0
+Info:  0.7  1.0    Net pulses.nutation_pulse_start[0] budget 0.000000 ns (108,41) -> (108,42)
+Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_10$CCU2_SLICE.B0
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:88.14-88.34
-Info:  0.3  1.5  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCO
-Info:  0.0  1.5    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[5] budget 0.000000 ns (107,35) -> (108,35)
+Info:  0.3  1.3  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_10$CCU2_SLICE.FCO
+Info:  0.0  1.3    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[1] budget 0.000000 ns (108,42) -> (108,42)
+Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_3$CCU2_SLICE.FCI
+Info:                Defined in:
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:151.18-151.48
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.0  1.4  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_3$CCU2_SLICE.FCO
+Info:  0.0  1.4    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[3] budget 0.000000 ns (108,42) -> (108,42)
+Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCI
+Info:                Defined in:
+Info:                  pulse_gen.v:80.9-103.4
+Info:                  pulses.v:151.18-151.48
+Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.0  1.4  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCO
+Info:  0.0  1.4    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[5] budget 0.000000 ns (108,42) -> (109,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.6  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCO
-Info:  0.0  1.6    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[7] budget 0.000000 ns (108,35) -> (108,35)
+Info:  0.0  1.5  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCO
+Info:  0.0  1.5    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[7] budget 0.000000 ns (109,42) -> (109,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.6  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCO
-Info:  0.0  1.6    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[9] budget 0.000000 ns (108,35) -> (108,35)
+Info:  0.0  1.5  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCO
+Info:  0.0  1.5    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[9] budget 0.000000 ns (109,42) -> (109,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_9$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.6  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_9$CCU2_SLICE.FCO
-Info:  0.0  1.6    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[11] budget 0.000000 ns (108,35) -> (108,35)
+Info:  0.0  1.5  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_9$CCU2_SLICE.FCO
+Info:  0.0  1.5    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[11] budget 0.000000 ns (109,42) -> (109,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_8$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.7  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_8$CCU2_SLICE.FCO
-Info:  0.0  1.7    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[13] budget 0.000000 ns (108,35) -> (109,35)
+Info:  0.0  1.6  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_8$CCU2_SLICE.FCO
+Info:  0.0  1.6    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[13] budget 0.000000 ns (109,42) -> (110,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_7$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.7  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_7$CCU2_SLICE.FCO
-Info:  0.0  1.7    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[15] budget 0.000000 ns (109,35) -> (109,35)
+Info:  0.0  1.6  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_7$CCU2_SLICE.FCO
+Info:  0.0  1.6    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[15] budget 0.000000 ns (110,42) -> (110,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_6$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.8  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_6$CCU2_SLICE.FCO
-Info:  0.0  1.8    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[17] budget 0.000000 ns (109,35) -> (109,35)
+Info:  0.0  1.7  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_6$CCU2_SLICE.FCO
+Info:  0.0  1.7    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[17] budget 0.000000 ns (110,42) -> (110,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_5$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.8  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_5$CCU2_SLICE.FCO
-Info:  0.0  1.8    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[19] budget 0.000000 ns (109,35) -> (109,35)
+Info:  0.0  1.7  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_5$CCU2_SLICE.FCO
+Info:  0.0  1.7    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[19] budget 0.000000 ns (110,42) -> (110,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.9  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.FCO
-Info:  0.0  1.9    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[21] budget 0.000000 ns (109,35) -> (110,35)
+Info:  0.0  1.8  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.FCO
+Info:  0.0  1.8    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[21] budget 0.000000 ns (110,42) -> (111,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.0  1.9  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT$CCU2_SLICE.FCO
-Info:  0.0  1.9    Net $nextpnr_CCU2C_23$CIN budget 0.000000 ns (110,35) -> (110,35)
-Info:                Sink $nextpnr_CCU2C_23$CCU2_SLICE.FCI
-Info:  0.3  2.2  Source $nextpnr_CCU2C_23$CCU2_SLICE.F0
-Info:  0.5  2.7    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[23] budget 1.659000 ns (110,35) -> (106,35)
+Info:  0.0  1.8  Source pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C_CCU2C_COUT$CCU2_SLICE.FCO
+Info:  0.0  1.8    Net $nextpnr_CCU2C_25$CIN budget 0.000000 ns (111,42) -> (111,42)
+Info:                Sink $nextpnr_CCU2C_25$CCU2_SLICE.FCI
+Info:  0.3  2.1  Source $nextpnr_CCU2C_25$CCU2_SLICE.F0
+Info:  0.5  2.5    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR_LUT4_Z_C[23] budget 1.659000 ns (111,42) -> (107,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.D1
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:151.18-151.48
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.1  2.8  Source pulses.nut_pulse_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.F1
-Info:  0.2  3.0    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR budget 1.658000 ns (106,35) -> (106,35)
+Info:  0.1  2.7  Source pulses.nut_pulse_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.F1
+Info:  0.1  2.8    Net pulses.nut_pulse_TRELLIS_FF_Q_LSR budget 1.658000 ns (107,42) -> (107,42)
 Info:                Sink pulses.nut_pulse_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.LSR
-Info:  0.2  3.2  Setup pulses.nut_pulse_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.LSR
-Info: 1.6 ns logic, 1.6 ns routing
+Info:  0.2  3.0  Setup pulses.nut_pulse_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.LSR
+Info: 1.7 ns logic, 1.3 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
 Info: curr total
 Info:  0.0  0.0  Source RS232_Rx$tr_io.O
-Info:  5.9  5.9    Net RS232_Rx$TRELLIS_IO_IN budget 0.000000 ns (0,92) -> (101,41)
-Info:                Sink RS232_Rx_LUT4_C_SLICE.C0
+Info:  5.9  5.9    Net RS232_Rx$TRELLIS_IO_IN budget 0.000000 ns (0,92) -> (102,43)
+Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_CE_PFUMX_Z_C0_LUT4_D_SLICE.C0
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:53.11-53.13
 Info:                  pulse_control.v:78.7-90.4
-Info:  0.1  6.1  Source RS232_Rx_LUT4_C_SLICE.F0
-Info:  0.7  6.8    Net RS232_Rx_LUT4_B_Z[1] budget 0.000000 ns (101,41) -> (103,41)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.B1
+Info:  0.1  6.1  Source control.uart0.recv_state_TRELLIS_FF_Q_CE_PFUMX_Z_C0_LUT4_D_SLICE.F0
+Info:  0.9  6.9    Net control.uart0.recv_state_TRELLIS_FF_Q_CE_PFUMX_Z_C0_LUT4_D_Z[4] budget 0.000000 ns (102,43) -> (106,41)
+Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_CE_PFUMX_Z_C0_LUT4_D_Z_LUT4_Z_D_LUT4_Z_SLICE.C0
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.2  7.0  Source control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
-Info:  0.0  7.0    Net control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D1 budget 0.000000 ns (103,41) -> (103,41)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
-Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.62-158.64
-Info:  0.1  7.2  Source control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.0  7.2    Net control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1 budget 0.000000 ns (103,41) -> (103,41)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXB
-Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.70-158.72
-Info:  0.1  7.3  Source control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
-Info:  0.7  8.1    Net control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_B[0] budget 3.551000 ns (103,41) -> (104,40)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_SLICE.B0
+Info:  0.1  7.1  Source control.uart0.recv_state_TRELLIS_FF_Q_CE_PFUMX_Z_C0_LUT4_D_Z_LUT4_Z_D_LUT4_Z_SLICE.F0
+Info:  0.5  7.6    Net control.uart0.recv_state_TRELLIS_FF_Q_CE_PFUMX_Z_C0_LUT4_D_Z_LUT4_Z_D[4] budget 0.000000 ns (106,41) -> (106,40)
+Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.M0
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  8.2  Source control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_SLICE.F0
-Info:  0.1  8.3    Net control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z[0] budget 3.551000 ns (104,40) -> (104,40)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_SLICE.DI0
+Info:  0.2  7.7  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
+Info:  0.0  7.7    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1 budget 0.000000 ns (106,40) -> (106,40)
+Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
+Info:                Defined in:
+Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:142.38-142.40
+Info:  0.1  7.9  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
+Info:  0.1  7.9    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z[8] budget 6.008000 ns (106,40) -> (106,40)
+Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.DI1
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:0.0-0.0
 Info:                  uart.v:155.9-258.16
 Info:                  pulse_control.v:78.7-90.4
 Info:                  /usr/local/bin/../share/yosys/techmap.v:575.21-575.22
-Info:  0.0  8.3  Setup control.uart0.recv_state_TRELLIS_FF_Q_2_DI_LUT4_Z_1_A_LUT4_A_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_LUT4_Z_9_SLICE.DI0
-Info: 0.8 ns logic, 7.5 ns routing
+Info:  0.0  7.9  Setup control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_D_LUT4_A_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.DI1
+Info: 0.6 ns logic, 7.4 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk_pll':
 Info: curr total
 Info:  0.0  0.0  Source resetn$tr_io.O
-Info:  4.5  4.5    Net resetn$TRELLIS_IO_IN budget 1.540000 ns (0,47) -> (110,33)
-Info:                Sink pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_Z_LUT4_Z_SLICE.A0
+Info:  4.2  4.2    Net resetn$TRELLIS_IO_IN budget 1.498000 ns (0,47) -> (111,41)
+Info:                Sink pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_SLICE.A0
 Info:                Defined in:
 Info:                  pulse_gen.v:5.9-5.15
-Info:  0.1  4.7  Source pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_Z_LUT4_Z_SLICE.F0
-Info:  1.0  5.7    Net pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_Z[2] budget 1.540000 ns (110,33) -> (108,36)
-Info:                Sink pulses.sync_TRELLIS_FF_Q_CE_PFUMX_Z_SLICE.B0
+Info:  0.1  4.4  Source pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_SLICE.F0
+Info:  0.3  4.7    Net pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_Z[4] budget 0.698000 ns (111,41) -> (111,41)
+Info:                Sink pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_SLICE.C1
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.2  5.9  Source pulses.sync_TRELLIS_FF_Q_CE_PFUMX_Z_SLICE.OFX0
-Info:  0.5  6.4    Net pulses.sync_TRELLIS_FF_Q_CE budget 0.823000 ns (108,36) -> (108,39)
-Info:                Sink pulses.sync_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.CE
-Info:  0.0  6.4  Setup pulses.sync_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.CE
-Info: 0.4 ns logic, 6.0 ns routing
+Info:  0.1  4.8  Source pulses.block_LUT4_D_B_LUT4_Z_D_LUT4_C_SLICE.F1
+Info:  0.6  5.4    Net pulses.pulses_TRELLIS_FF_Q_LSR budget 0.697000 ns (111,41) -> (111,38)
+Info:                Sink pulses.cw_LUT4_D_SLICE.LSR
+Info:  0.2  5.6  Setup pulses.cw_LUT4_D_SLICE.LSR
+Info: 0.5 ns logic, 5.1 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
 Info: curr total
 Info:  0.3  0.3  Source control.uart0.tx_out_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.Q1
-Info:  5.8  6.1    Net RS232_Tx$TRELLIS_IO_OUT budget 83.025002 ns (98,38) -> (0,92)
+Info:  5.7  6.0    Net RS232_Tx$TRELLIS_IO_OUT budget 83.025002 ns (98,43) -> (0,92)
 Info:                Sink RS232_Tx$tr_io.I
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:105.9-105.15
 Info:                  pulse_control.v:78.7-90.4
-Info: 0.3 ns logic, 5.8 ns routing
+Info: 0.3 ns logic, 5.7 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> 'posedge $glbnet$clk_pll':
 Info: curr total
-Info:  0.3  0.3  Source pulses.nutation_pulse_delay_TRELLIS_FF_Q_14_SLICE.Q0
-Info:  1.0  1.3    Net pulses.nutation_pulse_delay[1] budget 1.068000 ns (107,36) -> (107,33)
-Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_7$CCU2_SLICE.B1
+Info:  0.3  0.3  Source control.period_TRELLIS_FF_Q_27_SLICE.Q0
+Info:  0.9  1.3    Net period[4] budget 1.068000 ns (103,40) -> (103,39)
+Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_2$CCU2_SLICE.A0
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
-Info:                  pulses.v:87.14-87.34
-Info:  0.3  1.6  Source pulses.nutation_pulse_delay_CCU2C_B0_7$CCU2_SLICE.FCO
-Info:  0.0  1.6    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[2] budget 0.000000 ns (107,33) -> (107,33)
-Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_3$CCU2_SLICE.FCI
-Info:                Defined in:
-Info:                  pulse_gen.v:80.9-103.4
-Info:                  pulses.v:148.28-148.54
-Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.6  Source pulses.nutation_pulse_delay_CCU2C_B0_3$CCU2_SLICE.FCO
-Info:  0.0  1.6    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[4] budget 0.000000 ns (107,33) -> (107,33)
-Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_2$CCU2_SLICE.FCI
-Info:                Defined in:
-Info:                  pulse_gen.v:80.9-103.4
-Info:                  pulses.v:148.28-148.54
-Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.6  Source pulses.nutation_pulse_delay_CCU2C_B0_2$CCU2_SLICE.FCO
-Info:  0.0  1.6    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[6] budget 0.000000 ns (107,33) -> (108,33)
+Info:                  pulses.v:18.16-18.19
+Info:  0.3  1.5  Source pulses.nutation_pulse_delay_CCU2C_B0_2$CCU2_SLICE.FCO
+Info:  0.0  1.5    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[6] budget 0.000000 ns (103,39) -> (104,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.7  Source pulses.nutation_pulse_delay_CCU2C_B0_1$CCU2_SLICE.FCO
-Info:  0.0  1.7    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[8] budget 0.000000 ns (108,33) -> (108,33)
+Info:  0.0  1.6  Source pulses.nutation_pulse_delay_CCU2C_B0_1$CCU2_SLICE.FCO
+Info:  0.0  1.6    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[8] budget 0.000000 ns (104,39) -> (104,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.7  Source pulses.nutation_pulse_delay_CCU2C_B0$CCU2_SLICE.FCO
-Info:  0.0  1.7    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[10] budget 0.000000 ns (108,33) -> (108,33)
+Info:  0.0  1.6  Source pulses.nutation_pulse_delay_CCU2C_B0$CCU2_SLICE.FCO
+Info:  0.0  1.6    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[10] budget 0.000000 ns (104,39) -> (104,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_6$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.8  Source pulses.nutation_pulse_delay_CCU2C_B0_6$CCU2_SLICE.FCO
-Info:  0.0  1.8    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[12] budget 0.000000 ns (108,33) -> (108,33)
+Info:  0.0  1.7  Source pulses.nutation_pulse_delay_CCU2C_B0_6$CCU2_SLICE.FCO
+Info:  0.0  1.7    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[12] budget 0.000000 ns (104,39) -> (104,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_5$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.8  Source pulses.nutation_pulse_delay_CCU2C_B0_5$CCU2_SLICE.FCO
-Info:  0.0  1.8    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[14] budget 0.000000 ns (108,33) -> (109,33)
+Info:  0.0  1.7  Source pulses.nutation_pulse_delay_CCU2C_B0_5$CCU2_SLICE.FCO
+Info:  0.0  1.7    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[14] budget 0.000000 ns (104,39) -> (105,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_4$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.9  Source pulses.nutation_pulse_delay_CCU2C_B0_4$CCU2_SLICE.FCO
-Info:  0.0  1.9    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[16] budget 0.000000 ns (109,33) -> (109,33)
+Info:  0.0  1.8  Source pulses.nutation_pulse_delay_CCU2C_B0_4$CCU2_SLICE.FCO
+Info:  0.0  1.8    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[16] budget 0.000000 ns (105,39) -> (105,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_3$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.9  Source pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_3$CCU2_SLICE.FCO
-Info:  0.0  1.9    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[18] budget 0.000000 ns (109,33) -> (109,33)
+Info:  0.0  1.8  Source pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_3$CCU2_SLICE.FCO
+Info:  0.0  1.8    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[18] budget 0.000000 ns (105,39) -> (105,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_2$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.0  1.9  Source pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_2$CCU2_SLICE.FCO
-Info:  0.0  1.9    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[20] budget 0.000000 ns (109,33) -> (109,33)
+Info:  0.0  1.8  Source pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_2$CCU2_SLICE.FCO
+Info:  0.0  1.8    Net pulses.nutation_pulse_delay_CCU2C_B0_COUT[20] budget 0.000000 ns (105,39) -> (105,39)
 Info:                Sink pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.54
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.3  2.2  Source pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.F1
-Info:  1.1  3.4    Net pulses.nutation_pulse_delay_CCU2C_B0_S0[21] budget 1.067000 ns (109,33) -> (109,32)
+Info:  0.3  2.1  Source pulses.nutation_pulse_delay_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.F1
+Info:  1.2  3.3    Net pulses.nutation_pulse_delay_CCU2C_B0_S0[21] budget 1.067000 ns (105,39) -> (110,41)
 Info:                Sink pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_2$CCU2_SLICE.A1
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.77
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:30.22-30.23
 Info:  0.3  3.6  Source pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_2$CCU2_SLICE.FCO
-Info:  0.0  3.6    Net pulses.nutation_pulse_width_CCU2C_B0_COUT[22] budget 0.000000 ns (109,32) -> (110,32)
+Info:  0.0  3.6    Net pulses.nutation_pulse_width_CCU2C_B0_COUT[22] budget 0.000000 ns (110,41) -> (111,41)
 Info:                Sink pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.77
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.3  3.9  Source pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.F1
-Info:  0.1  4.0    Net pulses.nutation_pulse_width_CCU2C_B0_S0[23] budget 1.067000 ns (110,32) -> (110,32)
+Info:  0.3  3.8  Source pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.F1
+Info:  0.1  3.9    Net pulses.nutation_pulse_width_CCU2C_B0_S0[23] budget 1.067000 ns (111,41) -> (111,41)
 Info:                Sink pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.DI1
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:148.28-148.77
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:34.26-34.27
-Info:  0.0  4.0  Setup pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.DI1
-Info: 1.8 ns logic, 2.2 ns routing
+Info:  0.0  3.9  Setup pulses.nutation_pulse_width_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.DI1
+Info: 1.7 ns logic, 2.2 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk_pll' -> '<async>':
 Info: curr total
-Info:  0.3  0.3  Source pulses.block_LUT4_D_SLICE.Q0
-Info:  1.4  1.7    Net P2$TRELLIS_IO_OUT budget 83.024002 ns (108,38) -> (126,41)
-Info:                Sink P2$tr_io.I
+Info:  0.3  0.3  Source pulses.pulses_LUT4_C_SLICE.Q1
+Info:  1.2  1.5    Net Pulse$TRELLIS_IO_OUT budget 83.025002 ns (111,44) -> (126,41)
+Info:                Sink Pulse$tr_io.I
 Info:                Defined in:
 Info:                  pulse_gen.v:80.9-103.4
-Info:                  pulses.v:45.13-45.18
-Info: 0.3 ns logic, 1.4 ns routing
+Info:                  pulses.v:42.13-42.21
+Info: 0.3 ns logic, 1.2 ns routing
 
-Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 151.08 MHz (PASS at 50.00 MHz)
-Info: Max frequency for clock           '$glbnet$clk_pll': 311.53 MHz (PASS at 200.00 MHz)
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 149.66 MHz (PASS at 50.00 MHz)
+Info: Max frequency for clock           '$glbnet$clk_pll': 331.56 MHz (PASS at 200.00 MHz)
 
-Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 8.30 ns
-Info: Max delay <async>                           -> posedge $glbnet$clk_pll          : 6.40 ns
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 6.09 ns
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> posedge $glbnet$clk_pll          : 4.01 ns
-Info: Max delay posedge $glbnet$clk_pll           -> <async>                          : 1.70 ns
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 7.94 ns
+Info: Max delay <async>                           -> posedge $glbnet$clk_pll          : 5.62 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 6.02 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> posedge $glbnet$clk_pll          : 3.94 ns
+Info: Max delay posedge $glbnet$clk_pll           -> <async>                          : 1.48 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 7 endpoint(s)
-Info:          + represents [1,7) endpoint(s)
-Info: [ -1396,   2760) |*********+
-Info: [  2760,   6916) |**+
-Info: [  6916,  11072) | 
-Info: [ 11072,  15228) |******************+
-Info: [ 15228,  19384) |************************************************************ 
-Info: [ 19384,  23540) | 
-Info: [ 23540,  27696) | 
-Info: [ 27696,  31852) | 
-Info: [ 31852,  36008) | 
-Info: [ 36008,  40164) | 
-Info: [ 40164,  44320) | 
-Info: [ 44320,  48476) | 
-Info: [ 48476,  52632) | 
-Info: [ 52632,  56788) | 
-Info: [ 56788,  60944) | 
-Info: [ 60944,  65100) | 
-Info: [ 65100,  69256) | 
-Info: [ 69256,  73412) | 
-Info: [ 73412,  77568) |+
-Info: [ 77568,  81724) |+
+Info:  legend: * represents 6 endpoint(s)
+Info:          + represents [1,6) endpoint(s)
+Info: [  -625,   3504) |************+
+Info: [  3504,   7633) |+
+Info: [  7633,  11762) | 
+Info: [ 11762,  15891) |*********************+
+Info: [ 15891,  20020) |************************************************************ 
+Info: [ 20020,  24149) | 
+Info: [ 24149,  28278) | 
+Info: [ 28278,  32407) | 
+Info: [ 32407,  36536) | 
+Info: [ 36536,  40665) | 
+Info: [ 40665,  44794) | 
+Info: [ 44794,  48923) | 
+Info: [ 48923,  53052) | 
+Info: [ 53052,  57181) | 
+Info: [ 57181,  61310) | 
+Info: [ 61310,  65439) | 
+Info: [ 65439,  69568) | 
+Info: [ 69568,  73697) | 
+Info: [ 73697,  77826) |+
+Info: [ 77826,  81955) |+
 ecppack --svf pulse_gen.svf pulse_gen_out.config pulse_gen.bit
 rm pulse_gen_out.config pulse_gen.json

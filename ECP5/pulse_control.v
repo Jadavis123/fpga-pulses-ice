@@ -25,11 +25,11 @@ module pulse_control(
 	// 32-bit allows times up to 21 seconds
 	parameter stperiod = 15; // 1 ms period
 	parameter stp1width = 30; // 150 ns
-	parameter stp2width = 30;
+	parameter stp2width = 60; // 300 ns
 	parameter stdelay = 200; // 1 us delay
-	parameter stblock = 100; // 500 ns block open
-	parameter stcpmg = 3; 
-	parameter stnutdel = 100; 
+	parameter stblock = 50; // 250 ns block open
+	parameter stcpmg = 1; 
+	parameter stnutdel = 0; 
 	parameter stnutwid = 100;
 
 	reg [31:0] 			   period = stperiod << 16;
