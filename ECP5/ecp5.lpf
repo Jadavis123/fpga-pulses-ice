@@ -1,7 +1,7 @@
 LOCATE COMP "clk" SITE "B11";
 IOBUF PORT "clk" IO_TYPE=LVCMOS33;
 
-LOCATE COMP "resetn" SITE "G2";
+LOCATE COMP "resetn" SITE "N20"; //raspberry pi header (JP8) pin 10 - should always be 0 if nothing plugged in
 IOBUF PORT "resetn" IO_TYPE=LVCMOS33;
 
 LOCATE COMP "RS232_Rx" SITE "P3";

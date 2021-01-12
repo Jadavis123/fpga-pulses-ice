@@ -107,10 +107,10 @@ module pulses(
 	//In order to improve timing on clk_pll, do everything possible on slower clk block
 	//Since clk is 50 MHz and clk_pll is 200 MHz (even multiple), hopefully should reduce problems with two blocks being out of sync
 	always @(posedge clk) begin
-		{ rx_done, xfer_bits } <= { xfer_bits, rxd };
+		//{ rx_done, xfer_bits } <= { xfer_bits, rxd };
 		
 		//assign registers to input values when communication from PC is received
-		if (rx_done) begin
+		//if (rx_done) begin
 			period  <= per;
 			p1width <= p1wid;
 			p2width <= p2wid;
@@ -121,7 +121,7 @@ module pulses(
 			pulse_block_off <= p_bl_off;
 			cpmg <= cp;
 			block <= bl;
-		end
+		//end
 		
 		//Calculate these values here, since they only change when their components are updated - better for timing
 		p2start <= p1width + delay;
