@@ -1,0 +1,5 @@
+LOCATE COMP "clk" SITE "A10";
+IOBUF PORT "clk" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "outpin" SITE "U16"; //raspberry pi header (JP8) pin 5
+IOBUF PORT "outpin" IO_TYPE=LVCMOS33;
