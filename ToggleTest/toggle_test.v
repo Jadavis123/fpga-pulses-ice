@@ -1,7 +1,7 @@
 `default_nettype none
 module toggle_test(
 	input clk,
-	output outpin,
+	output outpin
 	);
 	
 	reg out = 0;
@@ -15,10 +15,10 @@ module toggle_test(
         .clock_out(clk_pll),
 	    .locked(lock)
 	    );
-		
-	always @(posedge clk) begin	
-		out <= (count == 12000) ? ~out : out;
-		count <= (count == 12000) ? 0 : count + 32'b1;
+	
+	always @(posedge clk_pll) begin	
+		out <= (count < 200000) ? 1'b0 : 1'b1;
+		count <= (count == 400000) ? 0 : count + 32'd1;
 	end
 	
 endmodule

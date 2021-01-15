@@ -1,6 +1,8 @@
 PROJ=toggle_test
 TRELLIS?=/usr/share/trellis
 
+SIMOUT = Sim/toggle_test
+
 all: ${PROJ}.bit
 
 %.json: %.v
@@ -19,3 +21,13 @@ prog: ${PROJ}.svf
 
 clean:
 	rm -f *.svf *.bit *.config *.json make.log
+
+simclean:
+	rm -f $(SIMOUT)_post $(SIMOUT)_tb.vcd
+
+sim: simclean
+	iverilog -o $(SIMOUT)_post toggle_test.v toggle_test_tb.v
+	vvp $(SIMOUT)_post
+	#gtkwave $(SIMOUT)_tb.vcd
+
+.PHONY: prog clean
