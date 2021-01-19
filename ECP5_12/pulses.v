@@ -130,9 +130,9 @@ module pulses(
 		block_on <= p1width + delay + p2width + delay;
 		
 		//For some reason, this was reducing timing massively when in the clk_pll block, and it doesn't need to be
-		if (reset) begin
-			counter <= 0;
-		end
+		//if (reset) begin
+		//	counter <= 0;
+		//end
 		
 		//Improves clk_pll timing, though not implemented exactly the same as in HX8K code due to presence of CPMG logic changing things
 		cw <= (cpmg > 0) ? 0 : 1;

@@ -4,7 +4,7 @@ module toggle_test(
 	output outpin
 	);
 	
-	reg out = 0;
+	reg out;
 	reg [31:0] count = 0;
 	wire clk_pll, lock;
 	
@@ -17,8 +17,8 @@ module toggle_test(
 	    );
 	
 	always @(posedge clk_pll) begin	
-		out <= (count < 200000) ? 1'b0 : 1'b1;
-		count <= (count == 400000) ? 0 : count + 32'd1;
+		out <= (count < 100000) ? 0 : 1;
+		count <= (count == 200000) ? 0 : count + 1;
 	end
 	
 endmodule

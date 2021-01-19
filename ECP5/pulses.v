@@ -130,7 +130,7 @@ module pulses(
 		block_on <= p1width + delay + p2width + delay;
 		
 		//For some reason, this was reducing timing massively when in the clk_pll block, and it doesn't need to be
-		if (reset) begin
+		if (!reset) begin
 			counter <= 0;
 		end
 		
@@ -142,7 +142,7 @@ module pulses(
 	/* The main loops runs on the 200 MHz PLL clock.
 	*/
 	always @(posedge clk_pll) begin
-		if (!reset) begin			
+		if (reset) begin			
 			//Calculate nutation pulse and regular pulses separately, then combine them later, to improve timing
 			//If nutation pulse is not needed, can just set its width to 0
 			nutation_pulse_start <= per - nutation_pulse_delay - nutation_pulse_width;
