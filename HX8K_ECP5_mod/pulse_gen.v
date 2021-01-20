@@ -5,6 +5,7 @@ module pulse_gen(
 		 // input 	resetn, // Reset the cycle
 		 output RS232_Tx, // Transmit pin for the FTDI chip
 		 output Pulse, // Output pin for the switch
+		 output Pulse2, //Second output for testing
 		 output Sync, // Output pin for the SYNC pulse
 		 //  output FM, // Output pin for the FM pulse
 		 output Block
@@ -35,6 +36,10 @@ module pulse_gen(
    //    wire [15:0] 		pulse_block_off;
    wire 		cpmg;
    wire 		rx_done;
+   wire 		pul;
+   
+   assign Pulse = pul;
+   assign Pulse2 = pul;
    
    //    wire [6:0] 		pre_att;
    //    wire [6:0] 		post_att;
@@ -96,7 +101,7 @@ module pulse_gen(
 		 .bl(block),
 		 .rxd(rx_done),
 		 .sync_on(Sync),
-		 .pulse_on(Pulse),
+		 .pulse_on(pul),
 		 //  .Att1({J1_4, J1_5, J1_6, J1_7, J1_8, J1_9, J1_10}),
 		 //  .Att3({J4_9, J4_8, J4_7, J4_6, J4_5, J4_4, J4_3}),
 		 .inhib(Block)
