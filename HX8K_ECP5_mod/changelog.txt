@@ -4,4 +4,7 @@
 	-optional: delete icepll.v (shouldn't cause any confusion since it's not included in Makefile, but doesn't hurt)
 3. replace HX8K Makefile with Makefile from ECP5 folder to use that toolchain
 4. make sure clk_constraint.py uses correct frequency values (12 input, 200 output)
+
 After performing these steps and running make, output reports that timing fails (max freq ~187 MHz). Made following changes to improve timing:
+
+1. Change PLL output to 100 MHz to check that everything works at that frequency (change in ecppll command and clk_constraint.py)

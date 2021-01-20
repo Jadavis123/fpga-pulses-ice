@@ -927,11 +927,11 @@ found and reported 0 problems.
 
 3.51. Executing JSON backend.
 
-End of script. Logfile hash: 22d3e9db6f, CPU: user 1.38s system 0.13s, MEM: 247.89 MB peak
+End of script. Logfile hash: 22d3e9db6f, CPU: user 0.95s system 0.11s, MEM: 247.87 MB peak
 Yosys 0.9+3578 (git sha1 ed579038, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 52% 15x read_verilog (0 sec), 9% 1x abc (0 sec), ...
+Time spent: 56% 15x read_verilog (0 sec), 17% 1x abc (0 sec), ...
 nextpnr-ecp5 --pre-pack clk_constraint.py --json toggle_test.json --textcfg toggle_test_out.config --um5g-85k --package CABGA381 --lpf ecp5.lpf
-Info: constraining clock net 'clk' to 12.00 MHz
+Info: constraining clock net 'clk' to 50.00 MHz
 Info: constraining clock net 'clk_pll' to 200.00 MHz
 
 Info: Logic utilisation before packing:
@@ -944,7 +944,7 @@ Info:          RAMW LUTs:      0/20910     0%
 Info:      Total DFFs:        66/83640     0%
 
 Info: Packing IOs..
-Info: pin 'clk$tr_io' constrained to Bel 'X63/Y0/PIOA'.
+Info: pin 'clk$tr_io' constrained to Bel 'X65/Y0/PIOA'.
 Info: pin 'outpin$tr_io' constrained to Bel 'X126/Y92/PIOC'.
 Info: Packing constants..
 Info: Packing carries...
@@ -955,13 +955,13 @@ Info: Packing paired LUTs into a SLICE...
 Info: Packing unpaired LUTs into a SLICE...
 Info: Packing unpaired FFs into a SLICE...
 Info: Generating derived timing constraints...
-Info:     Input frequency of PLL 'ecppll.pll_i' is constrained to 12.0 MHz
+Info:     Input frequency of PLL 'ecppll.pll_i' is constrained to 50.0 MHz
 Info: Promoting globals...
 Info:     promoting clock net clk_pll to global network
-Info: Checksum: 0xe7e44f83
+Info: Checksum: 0xd3625167
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0x7dcc7b25
+Info: Checksum: 0xf13a290a
 
 Info: Device utilisation:
 Info: 	       TRELLIS_SLICE:   106/41820     0%
@@ -991,60 +991,61 @@ Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
 Info: 	        ECLKBRIDGECS:     0/    2     0%
 
 Info: Placed 3 cells based on constraints.
-Info: Creating initial analytic placement for 72 cells, random placement wirelen = 10653.
-Info:     at initial placer iter 0, wirelen = 729
-Info:     at initial placer iter 1, wirelen = 608
-Info:     at initial placer iter 2, wirelen = 523
-Info:     at initial placer iter 3, wirelen = 499
+Info: Creating initial analytic placement for 72 cells, random placement wirelen = 10534.
+Info:     at initial placer iter 0, wirelen = 507
+Info:     at initial placer iter 1, wirelen = 391
+Info:     at initial placer iter 2, wirelen = 311
+Info:     at initial placer iter 3, wirelen = 293
 Info: Running main analytical placer.
-Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 545, spread = 828, legal = 867; time = 0.01s
-Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 482, spread = 742, legal = 831; time = 0.01s
-Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 483, spread = 737, legal = 790; time = 0.01s
-Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 484, spread = 723, legal = 812; time = 0.01s
-Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 493, spread = 737, legal = 825; time = 0.01s
-Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 513, spread = 855, legal = 899; time = 0.01s
-Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 478, spread = 729, legal = 845; time = 0.01s
-Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 536, spread = 760, legal = 827; time = 0.01s
-Info: HeAP Placer Time: 0.18s
+Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 340, spread = 996, legal = 1096; time = 0.01s
+Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 343, spread = 704, legal = 769; time = 0.02s
+Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 355, spread = 594, legal = 645; time = 0.02s
+Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 368, spread = 588, legal = 639; time = 0.01s
+Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 355, spread = 592, legal = 615; time = 0.01s
+Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 396, spread = 590, legal = 645; time = 0.01s
+Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 365, spread = 621, legal = 691; time = 0.01s
+Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 358, spread = 554, legal = 643; time = 0.01s
+Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 398, spread = 589, legal = 622; time = 0.01s
+Info:     at iteration #10, type TRELLIS_SLICE: wirelen solved = 408, spread = 575, legal = 650; time = 0.01s
+Info: HeAP Placer Time: 0.17s
 Info:   of which solving equations: 0.08s
 Info:   of which spreading cells: 0.02s
 Info:   of which strict legalisation: 0.01s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 31, wirelen = 790
-Info:   at iteration #5: temp = 0.000000, timing cost = 35, wirelen = 706
-Info:   at iteration #10: temp = 0.000000, timing cost = 50, wirelen = 676
-Info:   at iteration #10: temp = 0.000000, timing cost = 46, wirelen = 691 
-Info: SA placement time 0.05s
+Info:   at iteration #1: temp = 0.000000, timing cost = 42, wirelen = 615
+Info:   at iteration #5: temp = 0.000000, timing cost = 41, wirelen = 569
+Info:   at iteration #8: temp = 0.000000, timing cost = 37, wirelen = 557 
+Info: SA placement time 0.04s
 
-Info: Max frequency for clock '$glbnet$clk_pll': 291.46 MHz (PASS at 200.00 MHz)
+Info: Max frequency for clock '$glbnet$clk_pll': 265.60 MHz (PASS at 200.00 MHz)
 
-Info: Max delay posedge $glbnet$clk_pll -> <async>: 11.86 ns
+Info: Max delay posedge $glbnet$clk_pll -> <async>: 5.71 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [  1569,   5064) |************************************** 
-Info: [  5064,   8559) | 
-Info: [  8559,  12054) | 
-Info: [ 12054,  15549) | 
-Info: [ 15549,  19044) | 
-Info: [ 19044,  22539) | 
-Info: [ 22539,  26034) | 
-Info: [ 26034,  29529) | 
-Info: [ 29529,  33024) | 
-Info: [ 33024,  36519) | 
-Info: [ 36519,  40014) | 
-Info: [ 40014,  43509) | 
-Info: [ 43509,  47004) | 
-Info: [ 47004,  50499) | 
-Info: [ 50499,  53994) | 
-Info: [ 53994,  57489) | 
-Info: [ 57489,  60984) | 
-Info: [ 60984,  64479) | 
-Info: [ 64479,  67974) | 
-Info: [ 67974,  71469) |* 
-Info: Checksum: 0xfef5d1ac
+Info: [  1235,   5055) |************************************** 
+Info: [  5055,   8875) | 
+Info: [  8875,  12695) | 
+Info: [ 12695,  16515) | 
+Info: [ 16515,  20335) | 
+Info: [ 20335,  24155) | 
+Info: [ 24155,  27975) | 
+Info: [ 27975,  31795) | 
+Info: [ 31795,  35615) | 
+Info: [ 35615,  39435) | 
+Info: [ 39435,  43255) | 
+Info: [ 43255,  47075) | 
+Info: [ 47075,  50895) | 
+Info: [ 50895,  54715) | 
+Info: [ 54715,  58535) | 
+Info: [ 58535,  62355) | 
+Info: [ 62355,  66175) | 
+Info: [ 66175,  69995) | 
+Info: [ 69995,  73815) | 
+Info: [ 73815,  77635) |* 
+Info: Checksum: 0x0faf137d
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk_pll using global 0
 
@@ -1053,69 +1054,69 @@ Info: Setting up routing queue.
 Info: Routing 362 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        386 |        8        378 |    8   378 |         0|       0.38       0.38|
+Info:        362 |        0        362 |    0   362 |         0|       0.30       0.30|
 Info: Routing complete.
-Info: Router1 time 0.38s
-Info: Checksum: 0x715c69ca
+Info: Router1 time 0.30s
+Info: Checksum: 0x824e9fec
 
 Info: Critical path report for clock '$glbnet$clk_pll' (posedge -> posedge):
 Info: curr total
-Info:  0.3  0.3  Source count_TRELLIS_FF_Q_2_SLICE.Q0
-Info:  1.0  1.4    Net count[29] budget 0.843000 ns (13,6) -> (12,7)
-Info:                Sink count_LUT4_A_4_SLICE.C1
+Info:  0.3  0.3  Source count_TRELLIS_FF_Q_28_SLICE.Q0
+Info:  0.8  1.1    Net count[3] budget 0.843000 ns (119,3) -> (119,5)
+Info:                Sink count_LUT4_A_5_SLICE.C1
 Info:                Defined in:
 Info:                  toggle_test.v:8.13-8.18
-Info:  0.1  1.5  Source count_LUT4_A_4_SLICE.F1
-Info:  0.6  2.1    Net count_LUT4_A_6_Z[2] budget 0.843000 ns (12,7) -> (10,7)
-Info:                Sink count_LUT4_A_3_SLICE.C1
+Info:  0.1  1.3  Source count_LUT4_A_5_SLICE.F1
+Info:  0.7  2.0    Net count_LUT4_A_6_Z[1] budget 0.843000 ns (119,5) -> (120,6)
+Info:                Sink count_LUT4_A_3_SLICE.B1
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  2.3  Source count_LUT4_A_3_SLICE.F1
-Info:  0.6  2.8    Net out_TRELLIS_FF_Q_DI_LUT4_Z_B[0] budget 0.986000 ns (10,7) -> (10,7)
-Info:                Sink count_LUT4_A_1_SLICE.C1
+Info:  0.1  2.1  Source count_LUT4_A_3_SLICE.F1
+Info:  0.8  2.9    Net out_TRELLIS_FF_Q_DI_LUT4_Z_B[0] budget 0.986000 ns (120,6) -> (119,6)
+Info:                Sink count_TRELLIS_FF_Q_16_LSR_LUT4_Z_SLICE.D1
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  3.0  Source count_LUT4_A_1_SLICE.F1
-Info:  0.6  3.5    Net count_TRELLIS_FF_Q_11_LSR budget 0.986000 ns (10,7) -> (10,4)
-Info:                Sink count_TRELLIS_FF_Q_11_SLICE.LSR
-Info:  0.2  3.8  Setup count_TRELLIS_FF_Q_11_SLICE.LSR
-Info: 1.0 ns logic, 2.8 ns routing
+Info:  0.1  3.1  Source count_TRELLIS_FF_Q_16_LSR_LUT4_Z_SLICE.F1
+Info:  0.6  3.7    Net count_TRELLIS_FF_Q_16_LSR budget 0.986000 ns (119,6) -> (119,5)
+Info:                Sink count_TRELLIS_FF_Q_16_SLICE.LSR
+Info:  0.2  3.9  Setup count_TRELLIS_FF_Q_16_SLICE.LSR
+Info: 1.0 ns logic, 2.9 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk_pll' -> '<async>':
 Info: curr total
 Info:  0.3  0.3  Source out_TRELLIS_FF_Q_DI_LUT4_Z_SLICE.Q0
-Info:  7.7  8.0    Net outpin$TRELLIS_IO_OUT budget 83.024002 ns (12,8) -> (126,92)
+Info:  4.0  4.3    Net outpin$TRELLIS_IO_OUT budget 83.024002 ns (124,7) -> (126,92)
 Info:                Sink outpin$tr_io.I
 Info:                Defined in:
 Info:                  toggle_test.v:4.9-4.15
-Info: 0.3 ns logic, 7.7 ns routing
+Info: 0.3 ns logic, 4.0 ns routing
 
-Info: Max frequency for clock '$glbnet$clk_pll': 264.90 MHz (PASS at 200.00 MHz)
+Info: Max frequency for clock '$glbnet$clk_pll': 257.53 MHz (PASS at 200.00 MHz)
 
-Info: Max delay posedge $glbnet$clk_pll -> <async>: 7.99 ns
+Info: Max delay posedge $glbnet$clk_pll -> <async>: 4.34 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [  1225,   4931) |************************************** 
-Info: [  4931,   8637) | 
-Info: [  8637,  12343) | 
-Info: [ 12343,  16049) | 
-Info: [ 16049,  19755) | 
-Info: [ 19755,  23461) | 
-Info: [ 23461,  27167) | 
-Info: [ 27167,  30873) | 
-Info: [ 30873,  34579) | 
-Info: [ 34579,  38285) | 
-Info: [ 38285,  41991) | 
-Info: [ 41991,  45697) | 
-Info: [ 45697,  49403) | 
-Info: [ 49403,  53109) | 
-Info: [ 53109,  56815) | 
-Info: [ 56815,  60521) | 
-Info: [ 60521,  64227) | 
-Info: [ 64227,  67933) | 
-Info: [ 67933,  71639) | 
-Info: [ 71639,  75345) |* 
+Info: [  1117,   5011) |************************************** 
+Info: [  5011,   8905) | 
+Info: [  8905,  12799) | 
+Info: [ 12799,  16693) | 
+Info: [ 16693,  20587) | 
+Info: [ 20587,  24481) | 
+Info: [ 24481,  28375) | 
+Info: [ 28375,  32269) | 
+Info: [ 32269,  36163) | 
+Info: [ 36163,  40057) | 
+Info: [ 40057,  43951) | 
+Info: [ 43951,  47845) | 
+Info: [ 47845,  51739) | 
+Info: [ 51739,  55633) | 
+Info: [ 55633,  59527) | 
+Info: [ 59527,  63421) | 
+Info: [ 63421,  67315) | 
+Info: [ 67315,  71209) | 
+Info: [ 71209,  75103) | 
+Info: [ 75103,  78997) |* 
 ecppack --svf toggle_test.svf toggle_test_out.config toggle_test.bit
 rm toggle_test_out.config toggle_test.json
