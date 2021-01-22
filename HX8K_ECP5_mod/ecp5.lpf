@@ -10,10 +10,10 @@ LOCATE COMP "RS232_Tx" SITE "P2";
 IOBUF PORT "RS232_Rx" IO_TYPE=LVCMOS33;
 IOBUF PORT "RS232_Tx" IO_TYPE=LVCMOS33;
 
-LOCATE COMP "Sync" SITE "U16"; //raspberry pi header (JP8) pin 5
-LOCATE COMP "Pulse" SITE "U17"; //raspberry pi header (JP8) pin 7
+LOCATE COMP "Pulse" SITE "U16"; //raspberry pi header (JP8) pin 5
+LOCATE COMP "Block" SITE "U17"; //raspberry pi header (JP8) pin 7
 LOCATE COMP "Pulse2" SITE "G19"; //J5 pin 4
-LOCATE COMP "Block" SITE "P18"; //raspberry pi header (JP8) pin 8
+LOCATE COMP "Sync" SITE "P18"; //raspberry pi header (JP8) pin 8
 
 IOBUF PORT "Sync" IO_TYPE=LVCMOS33;
 IOBUF PORT "Pulse" IO_TYPE=LVCMOS33;

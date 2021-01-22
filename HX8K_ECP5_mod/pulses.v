@@ -121,12 +121,19 @@ module pulses(
 
       // if (rx_done) begin
 
-	 period <= per;
+	 /*period <= per;
 	 p1width <= p1wid;
 	 p2width <= p2wid;
 	 delay <= del;
 	 cpmg <= cp;
-	 block <= bl;
+	 block <= bl;*/
+	 
+	 period <= 10000;
+	 p1width <= 15;
+	 p2width <= 30;
+	 delay <= 100;
+	 cpmg <= 1;
+	 block <= 1;
 
       // end
       // if (reset) begin
@@ -135,6 +142,7 @@ module pulses(
       p2start <= p1width + delay;
       sync_down <= (cpmg > 0) ? p2start + p2width : period << 7;
       block_off <= p2start + p2width + delay - pulse_block;
+	  block_on <= p2start + p2width + delay;
 
       cw <= (cpmg > 0) ? 0 : 1;
 	 
@@ -175,6 +183,10 @@ module pulses(
 
 	block_off: begin
 	   inh <= 0;
+	end
+	
+	block_on: begin
+		inh <= block;
 	end
 	
       endcase // case (counter)
