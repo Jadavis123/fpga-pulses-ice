@@ -142,7 +142,6 @@ module pulses(
       p2start <= p1width + delay;
       sync_down <= (cpmg > 0) ? p2start + p2width : period << 7;
       block_off <= p2start + p2width + delay - pulse_block;
-	  block_on <= p2start + p2width + delay;
 
       cw <= (cpmg > 0) ? 0 : 1;
 	 
@@ -185,7 +184,7 @@ module pulses(
 	   inh <= 0;
 	end
 	
-	block_on: begin
+	160: begin
 		inh <= block;
 	end
 	

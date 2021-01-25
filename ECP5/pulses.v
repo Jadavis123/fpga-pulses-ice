@@ -83,7 +83,7 @@ module pulses(
 	//    reg [15:0] block_on = stp1width+2*stdelay+stp2width-8'd50+stblock;
 
 	reg  		nutation_pulse = 0;
-	reg [7:0]  nutation_pulse_width = 8'd50;
+	reg [7:0]   nutation_pulse_width = 8'd50;
 	reg [15:0]  nutation_pulse_delay = 16'd300;
 	reg [23:0]  nutation_pulse_start;
 	reg [23:0]  nutation_pulse_stop;
@@ -110,7 +110,7 @@ module pulses(
 		//{ rx_done, xfer_bits } <= { xfer_bits, rxd };
 		
 		//assign registers to input values when communication from PC is received
-		//if (rx_done) begin
+		/*if (rx_done) begin
 			period  <= per;
 			p1width <= p1wid;
 			p2width <= p2wid;
@@ -121,7 +121,18 @@ module pulses(
 			pulse_block_off <= p_bl_off;
 			cpmg <= cp;
 			block <= bl;
-		//end
+		end*/
+		
+		period <= 20000;
+		p1width <= 30;
+		p2width <= 60;
+		delay <= 200;
+		nutation_pulse_delay <= 0;
+		nutation_pulse_width <= 0;
+		pulse_block <= 50;
+		pulse_block_off <= 100;
+		cpmg <= 1;
+		block <= 1;
 		
 		//Calculate these values here, since they only change when their components are updated - better for timing
 		p2start <= p1width + delay;
@@ -130,7 +141,7 @@ module pulses(
 		block_on <= p1width + delay + p2width + delay;
 		
 		//For some reason, this was reducing timing massively when in the clk_pll block, and it doesn't need to be
-		if (!reset) begin
+		if (reset) begin
 			counter <= 0;
 		end
 		
@@ -142,7 +153,7 @@ module pulses(
 	/* The main loops runs on the 200 MHz PLL clock.
 	*/
 	always @(posedge clk_pll) begin
-		if (reset) begin			
+		if (!reset) begin			
 			//Calculate nutation pulse and regular pulses separately, then combine them later, to improve timing
 			//If nutation pulse is not needed, can just set its width to 0
 			nutation_pulse_start <= per - nutation_pulse_delay - nutation_pulse_width;
@@ -231,7 +242,7 @@ module pulses(
 		endcase
 		counter <= (counter < period) ? counter + 1 : 0; // Increment the counter until it reaches the period
 		pulse <= pulses || nut_pulse;
-		end// if (!reset)
+		end //if (!reset)
 
 	end // always @ (posedge clk_pll)
 endmodule // pulses
