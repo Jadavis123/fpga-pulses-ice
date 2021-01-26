@@ -23,16 +23,16 @@ module pulse_control(
 	// Running at a 201-MHz clock, our time step is ~5 (4.975) ns.
 	// All the times are thus divided by 4.975 ns to get cycles.
 	// 32-bit allows times up to 21 seconds
-	parameter stperiod = 15; // 1 ms period
+	parameter stperiod = 100500; // 1 ms period
 	parameter stp1width = 30; // 150 ns
 	parameter stp2width = 60; // 300 ns
 	parameter stdelay = 200; // 1 us delay
 	parameter stblock = 50; // 250 ns block open
 	parameter stcpmg = 1; 
-	parameter stnutdel = 0; 
+	parameter stnutdel = 100; 
 	parameter stnutwid = 100;
 
-	reg [31:0] 			   period = stperiod << 16;
+	reg [31:0] 			   period = stperiod;
 	reg [15:0] 			   p1width = stp1width;
 	reg [15:0] 			   delay = stdelay;
 	reg [15:0] 			   p2width = stp2width;

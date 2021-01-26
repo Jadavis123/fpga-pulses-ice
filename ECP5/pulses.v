@@ -59,32 +59,36 @@ module pulses(
 	// Running at a 201-MHz clock, our time step is ~5 (4.975) ns.
 	// All the times are thus divided by 4.975 ns to get cycles.
 	// 32-bit allows times up to 21 seconds
-	parameter stperiod = 1; // 0.328 ms period
+	/*parameter stperiod = 1; // 0.328 ms period
 	parameter stp1width = 30; // 150 ns
 	parameter stp2width = 30; //150 ns
 	parameter stdelay = 200; // 1 us delay
 	parameter stblock = 100; // 500 ns block open
-	parameter stcpmg = 3; // Do cpmg with 3 pulses by default
+	parameter stcpmg = 3; // Do cpmg with 3 pulses by default*/
    
-	reg [31:0] 			    period = stperiod << 16; //bit shift to get larger period value
-	reg [15:0] 			    p1width = stp1width;
-	reg [15:0] 			    delay = stdelay;
-	reg [15:0] 			    p2width = stp2width;
-	reg [7:0] 			    pulse_block = 8'd50;
-	reg [15:0] 			    pulse_block_off = stblock;
-	reg [7:0]  			    cpmg = stcpmg;
-	reg 				   	block = 1;
-	reg 					rx_done = 0;
+	reg [31:0] 				period;
+	reg [15:0] 			    p1width;
+	reg [15:0] 			    delay;
+	reg [15:0] 			    p2width;
+	reg [7:0] 			    pulse_block;
+	reg [15:0] 			    pulse_block_off;
+	reg [7:0]  			    cpmg;
+	reg 				   	block;
+	reg 					rx_done;
 
-	reg [15:0] p2start = stp1width+stdelay;
-	reg [15:0] sync_down = stp1width+stdelay+stp2width;
-	reg [15:0] block_off = stp1width+stdelay+stdelay+stp2width-8'd50;
-	reg [15:0] block_on = stp1width+stdelay+stdelay+stp2width;
+	//reg [15:0] p2start = stp1width+stdelay;
+	//reg [15:0] sync_down = stp1width+stdelay+stp2width;
+	//reg [15:0] block_off = stp1width+stdelay+stdelay+stp2width-8'd50;
+	//reg [15:0] block_on = stp1width+stdelay+stdelay+stp2width;
 	//    reg [15:0] block_on = stp1width+2*stdelay+stp2width-8'd50+stblock;
+	
+	reg [15:0] p2start;
+	reg [15:0] sync_down;
+	reg [15:0] block_off;
+	reg [15:0] block_on;
 
-	reg  		nutation_pulse = 0;
-	reg [7:0]   nutation_pulse_width = 8'd50;
-	reg [15:0]  nutation_pulse_delay = 16'd300;
+	reg [7:0]   nutation_pulse_width;
+	reg [15:0]  nutation_pulse_delay;;
 	reg [23:0]  nutation_pulse_start;
 	reg [23:0]  nutation_pulse_stop;
 
@@ -110,7 +114,7 @@ module pulses(
 		//{ rx_done, xfer_bits } <= { xfer_bits, rxd };
 		
 		//assign registers to input values when communication from PC is received
-		/*if (rx_done) begin
+		/*//if (rx_done) begin
 			period  <= per;
 			p1width <= p1wid;
 			p2width <= p2wid;
@@ -121,7 +125,7 @@ module pulses(
 			pulse_block_off <= p_bl_off;
 			cpmg <= cp;
 			block <= bl;
-		end*/
+		//end*/
 		
 		period <= 20000;
 		p1width <= 30;
@@ -141,9 +145,9 @@ module pulses(
 		block_on <= p1width + delay + p2width + delay;
 		
 		//For some reason, this was reducing timing massively when in the clk_pll block, and it doesn't need to be
-		if (reset) begin
-			counter <= 0;
-		end
+		//if (reset) begin
+		//	counter <= 0;
+		//end
 		
 		//Improves clk_pll timing, though not implemented exactly the same as in HX8K code due to presence of CPMG logic changing things
 		cw <= (cpmg > 0) ? 0 : 1;
@@ -153,7 +157,7 @@ module pulses(
 	/* The main loops runs on the 200 MHz PLL clock.
 	*/
 	always @(posedge clk_pll) begin
-		if (!reset) begin			
+		//if (!reset) begin			
 			//Calculate nutation pulse and regular pulses separately, then combine them later, to improve timing
 			//If nutation pulse is not needed, can just set its width to 0
 			nutation_pulse_start <= per - nutation_pulse_delay - nutation_pulse_width;
@@ -242,7 +246,7 @@ module pulses(
 		endcase
 		counter <= (counter < period) ? counter + 1 : 0; // Increment the counter until it reaches the period
 		pulse <= pulses || nut_pulse;
-		end //if (!reset)
+		//end //if (!reset)
 
 	end // always @ (posedge clk_pll)
 endmodule // pulses
