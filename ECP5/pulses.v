@@ -88,7 +88,7 @@ module pulses(
 	reg [15:0] block_on;
 
 	reg [7:0]   nutation_pulse_width;
-	reg [15:0]  nutation_pulse_delay;;
+	reg [15:0]  nutation_pulse_delay;
 	reg [23:0]  nutation_pulse_start;
 	reg [23:0]  nutation_pulse_stop;
 
@@ -127,7 +127,7 @@ module pulses(
 			block <= bl;
 		//end*/
 		
-		period <= 20000;
+		period <= 4000;
 		p1width <= 30;
 		p2width <= 60;
 		delay <= 200;
@@ -135,7 +135,7 @@ module pulses(
 		nutation_pulse_width <= 0;
 		pulse_block <= 50;
 		pulse_block_off <= 100;
-		cpmg <= 1;
+		cpmg <= 3;
 		block <= 1;
 		
 		//Calculate these values here, since they only change when their components are updated - better for timing

@@ -71,20 +71,20 @@ input clk_pll,
 	// NOSIM2_START
    parameter att_on_val = 7'b1111111;
    parameter att_off_val = 7'b0000000;
-   parameter stperiod = 1;
+   parameter stperiod = 2000;
    parameter stp1width = 30; // 150 ns
    parameter stp2width = 60;
    parameter stdelay = 200; // 1 us delay
-   parameter stcpmg = 1; // Do CPMG with 3 pulses by default
+   parameter stcpmg = 3; // Do CPMG with 3 pulses by default
    parameter stblock = 50;
    parameter stblockoff = 100;
    parameter stnutwid = 0;
-   parameter stnutdel = 100;
+   parameter stnutdel = 0;
 
    // Initialize pulse values
    always @(posedge clk) begin
 		if (resetn) begin
-			period = stperiod << 18;
+			period = stperiod;
 			p1width = stp1width;
 			delay = stdelay;
 			p2width = stp2width;

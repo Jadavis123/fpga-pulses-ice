@@ -50,7 +50,7 @@ module tb;
 	end
    
    always begin
-      #2.5 clk_pll <= ~clk_pll;
+      #5 clk_pll <= ~clk_pll;
    end
 
    always begin
