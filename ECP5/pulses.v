@@ -135,14 +135,14 @@ module pulses(
 		nutation_pulse_width <= 0;
 		pulse_block <= 50;
 		pulse_block_off <= 100;
-		cpmg <= 3;
+		cpmg <= 1;
 		block <= 1;
 		
 		//Calculate these values here, since they only change when their components are updated - better for timing
 		p2start <= p1width + delay;
-		sync_down <= p1width + delay + p2width;
-		block_off <= p1width + delay + p2width + delay - pulse_block;
-		block_on <= p1width + delay + p2width + delay;
+		sync_down <= p2start + p2width;
+		block_off <= sync_down + delay - pulse_block;
+		block_on <= block_off + pulse_block;
 		
 		//For some reason, this was reducing timing massively when in the clk_pll block, and it doesn't need to be
 		//if (reset) begin
@@ -172,6 +172,7 @@ module pulses(
 				if (counter == per/2) begin //scope trigger open for half of period
 					sync <= 0;
 				end
+				inh <= 0;
 			end
 			1: begin //cpmg=1 : Hahn echo with nutation pulse
 
