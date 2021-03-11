@@ -2223,7 +2223,7 @@ ABC: Participating nodes from the first network   =     187. (  76.95 % of nodes
 ABC: Participating nodes from the second network  =     224. (  92.18 % of nodes)
 ABC: Node pairs (any polarity)                    =     187. (  76.95 % of names can be moved)
 ABC: Node pairs (same polarity)                   =     181. (  74.49 % of names can be moved)
-ABC: Total runtime =     0.04 sec
+ABC: Total runtime =     0.03 sec
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 6.44.1.2. Re-integrating ABC results.
@@ -2473,9 +2473,9 @@ found and reported 0 problems.
 
 6.51. Executing JSON backend.
 
-End of script. Logfile hash: 6c6988d673, CPU: user 7.09s system 0.35s, MEM: 250.07 MB peak
+End of script. Logfile hash: f9a2ef2410, CPU: user 8.76s system 0.45s, MEM: 250.05 MB peak
 Yosys 0.9+3578 (git sha1 ed579038, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 21% 18x read_verilog (1 sec), 14% 35x opt_expr (1 sec), ...
+Time spent: 21% 18x read_verilog (2 sec), 16% 35x opt_clean (1 sec), ...
 nextpnr-ecp5 --pre-pack clk_constraint.py --json pulse_gen.json --textcfg pulse_gen_out.config --um5g-85k --package CABGA381 --lpf ecp5.lpf
 Info: constraining clock net 'clk' to 50.00 MHz
 Info: constraining clock net 'clk_pll' to 100.00 MHz
@@ -2492,8 +2492,8 @@ Info:      Total DFFs:       312/83640     0%
 Info: Packing IOs..
 Info: pin 'P2$tr_io' constrained to Bel 'X126/Y92/PIOB'.
 Info: pin 'Pulse$tr_io' constrained to Bel 'X126/Y92/PIOC'.
-Info: pin 'RS232_Rx$tr_io' constrained to Bel 'X0/Y92/PIOC'.
-Info: pin 'RS232_Tx$tr_io' constrained to Bel 'X0/Y92/PIOB'.
+Info: pin 'RS232_Rx$tr_io' constrained to Bel 'X0/Y92/PIOB'.
+Info: pin 'RS232_Tx$tr_io' constrained to Bel 'X0/Y92/PIOC'.
 Info: pin 'Sync$tr_io' constrained to Bel 'X126/Y83/PIOD'.
 Info: pin 'clk$tr_io' constrained to Bel 'X65/Y0/PIOA'.
 Info: pin 'resetn$tr_io' constrained to Bel 'X126/Y83/PIOB'.
@@ -2510,10 +2510,10 @@ Info:     Input frequency of PLL 'ecppll.pll_i' is constrained to 50.0 MHz
 Info: Promoting globals...
 Info:     promoting clock net clk$TRELLIS_IO_IN to global network
 Info:     promoting clock net clk_pll to global network
-Info: Checksum: 0xbd262525
+Info: Checksum: 0xb468299f
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0x73c46a60
+Info: Checksum: 0x92722346
 
 Info: Device utilisation:
 Info: 	       TRELLIS_SLICE:   354/41820     0%
@@ -2550,16 +2550,16 @@ Info:     at initial placer iter 2, wirelen = 586
 Info:     at initial placer iter 3, wirelen = 606
 Info: Running main analytical placer.
 Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 586, spread = 1881, legal = 2012; time = 0.04s
-Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 695, spread = 1782, legal = 1938; time = 0.05s
-Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 720, spread = 1744, legal = 1896; time = 0.03s
-Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 800, spread = 1904, legal = 2085; time = 0.03s
+Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 695, spread = 1782, legal = 1938; time = 0.07s
+Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 720, spread = 1744, legal = 1896; time = 0.04s
+Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 800, spread = 1904, legal = 2085; time = 0.04s
 Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 805, spread = 1857, legal = 2027; time = 0.04s
-Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 827, spread = 1883, legal = 2045; time = 0.04s
-Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 840, spread = 1843, legal = 1966; time = 0.03s
-Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 864, spread = 1693, legal = 2000; time = 0.04s
-Info: HeAP Placer Time: 0.58s
-Info:   of which solving equations: 0.29s
-Info:   of which spreading cells: 0.02s
+Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 827, spread = 1883, legal = 2045; time = 0.07s
+Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 840, spread = 1843, legal = 1966; time = 0.05s
+Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 864, spread = 1693, legal = 2000; time = 0.05s
+Info: HeAP Placer Time: 0.67s
+Info:   of which solving equations: 0.34s
+Info:   of which spreading cells: 0.04s
 Info:   of which strict legalisation: 0.02s
 
 Info: Running simulated annealing placer for refinement.
@@ -2567,7 +2567,7 @@ Info:   at iteration #1: temp = 0.000000, timing cost = 131, wirelen = 1896
 Info:   at iteration #5: temp = 0.000000, timing cost = 107, wirelen = 1586
 Info:   at iteration #10: temp = 0.000000, timing cost = 104, wirelen = 1521
 Info:   at iteration #12: temp = 0.000000, timing cost = 112, wirelen = 1508 
-Info: SA placement time 1.05s
+Info: SA placement time 1.01s
 
 Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 180.02 MHz (PASS at 50.00 MHz)
 Info: Max frequency for clock           '$glbnet$clk_pll': 255.95 MHz (PASS at 100.00 MHz)
@@ -2599,7 +2599,7 @@ Info: [ 67037,  70846) |
 Info: [ 70846,  74655) | 
 Info: [ 74655,  78464) | 
 Info: [ 78464,  82273) |*+
-Info: Checksum: 0x3c230ea3
+Info: Checksum: 0x37bc1cd4
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
 Info:     routing clock net $glbnet$clk_pll using global 1
@@ -2609,80 +2609,72 @@ Info: Setting up routing queue.
 Info: Routing 1750 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |        3        996 |    3   996 |       755|       1.12       1.12|
-Info:       1761 |        8       1753 |    5   757 |         0|       1.67       2.79|
+Info:       1000 |        2        997 |    2   997 |       754|       1.45       1.45|
+Info:       1757 |        6       1751 |    4   754 |         0|       1.35       2.80|
 Info: Routing complete.
-Info: Router1 time 2.79s
-Info: Checksum: 0x20b0fc83
+Info: Router1 time 2.80s
+Info: Checksum: 0xc3ec91d6
 
 Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
 Info: curr total
-Info:  0.3  0.3  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_8_SLICE.Q1
-Info:  0.8  1.1    Net control.uart0.rx_clk[1] budget 3.505000 ns (3,87) -> (4,88)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0_CCU2C_S1_1$CCU2_SLICE.A1
+Info:  0.3  0.3  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_SLICE.Q0
+Info:  1.1  1.4    Net control.uart0.rx_clk[3] budget 3.505000 ns (5,87) -> (4,88)
+Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.A1
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:98.39-98.45
 Info:                  pulse_control.v:78.7-90.4
-Info:  0.3  1.4  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0_CCU2C_S1_1$CCU2_SLICE.FCO
-Info:  0.0  1.4    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S0_COUT[2] budget 0.000000 ns (4,88) -> (4,88)
-Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.FCI
-Info:                Defined in:
-Info:                  pulse_gen.v:59.16-76.4
-Info:                  uart.v:145.22-145.35
-Info:                  pulse_control.v:78.7-90.4
-Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:65.22-65.25
-Info:  0.0  1.4  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.FCO
-Info:  0.0  1.4    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S0_COUT[4] budget 0.000000 ns (4,88) -> (4,88)
+Info:  0.3  1.7  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.FCO
+Info:  0.0  1.7    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S0_COUT[4] budget 0.000000 ns (4,88) -> (4,88)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0_CCU2C_S1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:145.22-145.35
 Info:                  pulse_control.v:78.7-90.4
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:65.22-65.25
-Info:  0.3  1.7  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0_CCU2C_S1$CCU2_SLICE.F1
-Info:  0.8  2.5    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0[2] budget 3.504000 ns (4,88) -> (3,88)
+Info:  0.3  2.0  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0_CCU2C_S1$CCU2_SLICE.F1
+Info:  0.8  2.7    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_1_C_CCU2C_S1_S0[2] budget 3.504000 ns (4,88) -> (3,88)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.B0
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:145.22-145.35
 Info:                  pulse_control.v:78.7-90.4
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:65.27-65.29
-Info:  0.2  2.7  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
-Info:  0.0  2.7    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1 budget 0.000000 ns (3,88) -> (3,88)
+Info:  0.2  3.0  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
+Info:  0.0  3.0    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1 budget 0.000000 ns (3,88) -> (3,88)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.54-158.56
-Info:  0.1  2.9  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.0  2.9    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0 budget 0.000000 ns (3,88) -> (3,88)
+Info:  0.1  3.1  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
+Info:  0.0  3.1    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D0 budget 0.000000 ns (3,88) -> (3,88)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXA
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.66-158.68
-Info:  0.1  3.0  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
-Info:  0.6  3.6    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z[3] budget 3.504000 ns (3,88) -> (5,90)
+Info:  0.1  3.3  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_Z_1_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
+Info:  0.6  3.9    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z[3] budget 3.504000 ns (3,88) -> (5,90)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_SLICE.D1
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.2  3.9  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_SLICE.OFX0
-Info:  0.0  3.9    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_Z budget 0.000000 ns (5,90) -> (5,90)
+Info:  0.2  4.1  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_SLICE.OFX0
+Info:  0.0  4.1    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_Z budget 0.000000 ns (5,90) -> (5,90)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_SLICE.FXB
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.62-158.64
-Info:  0.1  4.0  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_SLICE.OFX1
-Info:  0.0  4.0    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_SD_1_Z budget 0.000000 ns (5,90) -> (5,90)
+Info:  0.1  4.3  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_SLICE.OFX1
+Info:  0.0  4.3    Net control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_L6MUX21_SD_1_Z budget 0.000000 ns (5,90) -> (5,90)
 Info:                Sink control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_1_SLICE.FXB
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.70-158.72
-Info:  0.1  4.2  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_1_SLICE.OFX1
-Info:  0.7  4.9    Net RS232_Rx_LUT4_A_Z[5] budget 3.507000 ns (5,90) -> (4,89)
+Info:  0.1  4.4  Source control.uart0.recv_state_TRELLIS_FF_Q_DI_LUT4_Z_B_PFUMX_Z_C0_LUT4_C_Z_LUT4_Z_3_D_PFUMX_C0_Z_PFUMX_C0_1_SLICE.OFX1
+Info:  0.7  5.1    Net RS232_Rx_LUT4_A_Z[5] budget 3.507000 ns (5,90) -> (4,89)
 Info:                Sink control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.D0
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  5.0  Source control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.F0
-Info:  0.6  5.6    Net control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR budget 3.506000 ns (4,89) -> (4,89)
+Info:  0.1  5.3  Source control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.F0
+Info:  0.6  5.8    Net control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR budget 3.506000 ns (4,89) -> (4,89)
 Info:                Sink control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.LSR
-Info:  0.2  5.8  Setup control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.LSR
-Info: 2.3 ns logic, 3.5 ns routing
+Info:  0.2  6.1  Setup control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.LSR
+Info: 2.3 ns logic, 3.8 ns routing
 
 Info: Critical path report for clock '$glbnet$clk_pll' (posedge -> posedge):
 Info: curr total
@@ -2809,31 +2801,31 @@ Info: 1.8 ns logic, 2.0 ns routing
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
 Info: curr total
 Info:  0.0  0.0  Source RS232_Rx$tr_io.O
-Info:  1.2  1.2    Net RS232_Rx$TRELLIS_IO_IN budget 0.000000 ns (0,92) -> (5,89)
+Info:  1.4  1.4    Net RS232_Rx$TRELLIS_IO_IN budget 0.000000 ns (0,92) -> (5,89)
 Info:                Sink RS232_Rx_LUT4_A_2_SLICE.A0
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  1.4  Source RS232_Rx_LUT4_A_2_SLICE.F0
-Info:  1.0  2.4    Net RS232_Rx_LUT4_B_Z[3] budget 6.498000 ns (5,89) -> (4,89)
+Info:  0.1  1.6  Source RS232_Rx_LUT4_A_2_SLICE.F0
+Info:  1.0  2.6    Net RS232_Rx_LUT4_B_Z[3] budget 6.498000 ns (5,89) -> (4,89)
 Info:                Sink control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.C0
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.1  2.5  Source control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.F0
-Info:  0.6  3.1    Net control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR budget 3.506000 ns (4,89) -> (4,89)
+Info:  0.1  2.7  Source control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.F0
+Info:  0.6  3.3    Net control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR budget 3.506000 ns (4,89) -> (4,89)
 Info:                Sink control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.LSR
-Info:  0.2  3.3  Setup control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.LSR
-Info: 0.5 ns logic, 2.8 ns routing
+Info:  0.2  3.5  Setup control.uart0.rx_bits_remaining_TRELLIS_FF_Q_3_LSR_LUT4_Z_SLICE.LSR
+Info: 0.5 ns logic, 3.0 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
 Info: curr total
 Info:  0.3  0.3  Source control.uart0.tx_out_TRELLIS_FF_Q_CE_LUT4_Z_SLICE.Q1
-Info:  0.9  1.2    Net RS232_Tx$TRELLIS_IO_OUT budget 83.025002 ns (2,85) -> (0,92)
+Info:  1.0  1.3    Net RS232_Tx$TRELLIS_IO_OUT budget 83.025002 ns (2,85) -> (0,92)
 Info:                Sink RS232_Tx$tr_io.I
 Info:                Defined in:
 Info:                  pulse_gen.v:59.16-76.4
 Info:                  uart.v:105.9-105.15
 Info:                  pulse_control.v:78.7-90.4
-Info: 0.3 ns logic, 0.9 ns routing
+Info: 0.3 ns logic, 1.0 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk_pll' -> '<async>':
 Info: curr total
@@ -2845,20 +2837,20 @@ Info:                  pulse_gen.v:80.9-103.4
 Info:                  pulses.v:42.13-42.21
 Info: 0.3 ns logic, 0.9 ns routing
 
-Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 171.67 MHz (PASS at 50.00 MHz)
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 164.72 MHz (PASS at 50.00 MHz)
 Info: Max frequency for clock           '$glbnet$clk_pll': 260.55 MHz (PASS at 100.00 MHz)
 
-Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 3.33 ns
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 1.23 ns
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 3.55 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 1.31 ns
 Info: Max delay posedge $glbnet$clk_pll           -> <async>                          : 1.17 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 2 endpoint(s)
 Info:          + represents [1,2) endpoint(s)
-Info: [  6162,   9965) |**********************+
+Info: [  6162,   9965) |*********************+
 Info: [  9965,  13768) | 
 Info: [ 13768,  17571) |************************************************************ 
-Info: [ 17571,  21374) |**************************************************+
+Info: [ 17571,  21374) |**********************************************+
 Info: [ 21374,  25177) | 
 Info: [ 25177,  28980) | 
 Info: [ 28980,  32783) | 
