@@ -7,21 +7,18 @@ module UARTTest(
 	output led,
 	output rxout
 	);
-	
-	reg led_set;
-	assign led = led_set;
 
 	// Setup necessary for UART
    wire 			   reset = 0;
-   reg 				   transmit;
+   reg 				   transmit = 1;
    reg [7:0] 		   tx_byte;
    wire 			   received;
    wire [7:0] 		   rx_byte;
    wire 			   is_receiving;
    wire 			   is_transmitting;
    wire 			   recv_error;
-   
-   assign rxout = rx_byte[0] || rx_byte[7];
+   reg [7:0]		   transmitbyte = 8'd65;
+   reg				   txstate = 0;
 
    // UART module, from https://github.com/cyrozap/osdvu
     uart uart0(
@@ -37,10 +34,47 @@ module UARTTest(
 	    .is_transmitting(is_transmitting),// Low when transmit line is idle
 	    .recv_error(recv_error)           // Indicates error in receiving packet.
 	    );
-		
+	
+	/*//using alternate UART, from https://github.com/gromero/ecp5
+	wire		reset = 0;
+	reg [7:0]   rx_byte, tx_byte;
+	reg [1:0]	addr;
+	wire		we, clk, cs, probe0, ack;
+	
+	//using alternate UART, from https://github.com/gromero/ecp5
+	uart uart0(
+		.clk(clk),
+		.reset(reset),
+		.rx_bit(RS232_Rx),
+		.tx_bit(RS232_Tx),
+		.wb_data_in(rx_byte),
+		.wb_data_out(tx_byte),
+		.wb_addr(addr),
+		.wb_we(we),             
+		.wb_clk(clk),           
+		.wb_stb(cs),           
+		.probe0(probe0),       
+		.wb_ack(ack)
+	);*/
+	
+	/*//testing received values
+	assign rxout = rx_byte[0] || rx_byte[7];
+	assign led_set = rx_byte[0] || rx_byte[7];*/
+	
+	//testing transmitted values
+	assign rxout = is_transmitting;
+	assign led = is_transmitting;
+	
 	always @(posedge clk) begin
-		if (received)
-			led_set <= rx_byte[0] || rx_byte[7];
+		tx_byte <= transmitbyte;
+		if (txstate) begin
+			transmit <= 1;
+			txstate <= 0;
+		end
+		else begin
+			transmit <=0;
+			txstate <= 1;
+		end
 	end
 	
 endmodule
