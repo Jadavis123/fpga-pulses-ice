@@ -409,14 +409,14 @@ Finding identical cells in module `\UARTTest'.
 Removed a total of 3 cells.
 
 3.11.6. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 1-bit at position 0 on $procdff$829 ($dff) from module UARTTest.
-Setting constant 0-bit at position 1 on $procdff$829 ($dff) from module UARTTest.
+Setting constant 0-bit at position 0 on $procdff$829 ($dff) from module UARTTest.
+Setting constant 1-bit at position 1 on $procdff$829 ($dff) from module UARTTest.
 Setting constant 0-bit at position 2 on $procdff$829 ($dff) from module UARTTest.
 Setting constant 0-bit at position 3 on $procdff$829 ($dff) from module UARTTest.
 Setting constant 0-bit at position 4 on $procdff$829 ($dff) from module UARTTest.
 Setting constant 0-bit at position 5 on $procdff$829 ($dff) from module UARTTest.
-Setting constant 1-bit at position 6 on $procdff$829 ($dff) from module UARTTest.
-Setting constant 0-bit at position 7 on $procdff$829 ($dff) from module UARTTest.
+Setting constant 0-bit at position 6 on $procdff$829 ($dff) from module UARTTest.
+Setting constant 1-bit at position 7 on $procdff$829 ($dff) from module UARTTest.
 
 3.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \UARTTest..
@@ -744,7 +744,7 @@ Removed a total of 0 cells.
 3.30.3. Executing OPT_DFF pass (perform DFF optimizations).
 Adding SRST signal on $auto$opt_dff.cc:764:run$876 ($dffe) from module UARTTest (D = $flatten\uart0.$3\tx_out[0:0], Q = \uart0.tx_out, rval = 1'0).
 Adding SRST signal on $auto$opt_dff.cc:764:run$860 ($dffe) from module UARTTest (D = $flatten\uart0.$3\tx_bits_remaining[3:0], Q = \uart0.tx_bits_remaining, rval = 4'1000).
-Adding SRST signal on $auto$opt_dff.cc:764:run$849 ($dffe) from module UARTTest (D = \uart0.tx_data [7:1], Q = \uart0.tx_data [6:0], rval = 7'1000001).
+Adding SRST signal on $auto$opt_dff.cc:764:run$849 ($dffe) from module UARTTest (D = \uart0.tx_data [7:1], Q = \uart0.tx_data [6:0], rval = 7'0000010).
 
 3.30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \UARTTest..
@@ -792,16 +792,12 @@ Removed 0 multiplexer ports.
       Old ports: A=10'1000100000, B=10'0011100010, Y=$auto$wreduce.cc:454:run$879 [9:0]
       New ports: A=2'10, B=2'01, Y={ $auto$wreduce.cc:454:run$879 [9] $auto$wreduce.cc:454:run$879 [1] }
       New connections: { $auto$wreduce.cc:454:run$879 [8:2] $auto$wreduce.cc:454:run$879 [0] } = { 1'0 $auto$wreduce.cc:454:run$879 [1] $auto$wreduce.cc:454:run$879 [1] 5'10000 }
-    Consolidated identical input bits for $mux cell $flatten\uart0.$procmux$413:
-      Old ports: A=8'01000001, B={ 1'0 \uart0.tx_data [7:1] }, Y=$flatten\uart0.$0\tx_data[7:0]
-      New ports: A=7'1000001, B=\uart0.tx_data [7:1], Y=$flatten\uart0.$0\tx_data[7:0] [6:0]
-      New connections: $flatten\uart0.$0\tx_data[7:0] [7] = 1'0
     Consolidated identical input bits for $mux cell $flatten\uart0.$ternary$uart.v:306$37:
       Old ports: A=2'00, B=2'11, Y=$flatten\uart0.$ternary$uart.v:306$37_Y
       New ports: A=1'0, B=1'1, Y=$flatten\uart0.$ternary$uart.v:306$37_Y [0]
       New connections: $flatten\uart0.$ternary$uart.v:306$37_Y [1] = $flatten\uart0.$ternary$uart.v:306$37_Y [0]
   Optimizing cells in module \UARTTest.
-Performed a total of 3 changes.
+Performed a total of 2 changes.
 
 3.32.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\UARTTest'.
@@ -812,8 +808,8 @@ Removed a total of 1 cells.
 
 3.32.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \UARTTest..
-Removed 1 unused cells and 2 unused wires.
-<suppressed ~2 debug messages>
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
 
 3.32.8. Executing OPT_EXPR pass (perform const folding).
 Optimizing module UARTTest.
@@ -826,7 +822,7 @@ Running muxtree optimizer on module \UARTTest..
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
-<suppressed ~6 debug messages>
+<suppressed ~7 debug messages>
 
 3.32.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \UARTTest.
@@ -837,7 +833,6 @@ Finding identical cells in module `\UARTTest'.
 Removed a total of 0 cells.
 
 3.32.13. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 0 on $auto$opt_dff.cc:764:run$849 ($dffe) from module UARTTest.
 
 3.32.14. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \UARTTest..
@@ -845,33 +840,7 @@ Finding unused cells or wires in module \UARTTest..
 3.32.15. Executing OPT_EXPR pass (perform const folding).
 Optimizing module UARTTest.
 
-3.32.16. Rerunning OPT passes. (Maybe there is more to do..)
-
-3.32.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \UARTTest..
-  Creating internal representation of mux trees.
-  Evaluating internal representation of mux trees.
-  Analyzing evaluation results.
-Removed 0 multiplexer ports.
-<suppressed ~6 debug messages>
-
-3.32.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \UARTTest.
-Performed a total of 0 changes.
-
-3.32.19. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\UARTTest'.
-Removed a total of 0 cells.
-
-3.32.20. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.32.21. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \UARTTest..
-
-3.32.22. Executing OPT_EXPR pass (perform const folding).
-Optimizing module UARTTest.
-
-3.32.23. Finished OPT passes. (There is nothing left to do.)
+3.32.16. Finished OPT passes. (There is nothing left to do.)
 
 3.33. Executing TECHMAP pass (map to technology primitives).
 
@@ -931,13 +900,13 @@ Using extmapper simplemap for cells of type $logic_and.
 Using extmapper simplemap for cells of type $logic_or.
 Using extmapper simplemap for cells of type $or.
 No more expansions possible.
-<suppressed ~350 debug messages>
+<suppressed ~352 debug messages>
 
 3.34. Executing OPT pass (performing simple optimizations).
 
 3.34.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module UARTTest.
-<suppressed ~118 debug messages>
+<suppressed ~127 debug messages>
 
 3.34.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\UARTTest'.
@@ -948,8 +917,8 @@ Removed a total of 18 cells.
 
 3.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \UARTTest..
-Removed 21 unused cells and 185 unused wires.
-<suppressed ~22 debug messages>
+Removed 28 unused cells and 186 unused wires.
+<suppressed ~29 debug messages>
 
 3.34.5. Finished fast OPT passes.
 
@@ -1033,10 +1002,11 @@ Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'0 for cells of type $_DF
 Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'1 for cells of type $_DFF_P_.
 Using template \$_SDFFE_PP0P_ for cells of type $_SDFFE_PP0P_.
 Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFF_P_.
+Using template $paramod\$_DFFE_PP_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFFE_PP_.
 Using template \$_SDFFE_PP1P_ for cells of type $_SDFFE_PP1P_.
 Using template $paramod\$_DFFE_PP_\_TECHMAP_WIREINIT_Q_=1'0 for cells of type $_DFFE_PP_.
 No more expansions possible.
-<suppressed ~147 debug messages>
+<suppressed ~159 debug messages>
 
 3.38. Executing OPT_EXPR pass (perform const folding).
 Optimizing module UARTTest.
@@ -1050,7 +1020,7 @@ Handling GSR in UARTTest.
 
 3.42. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \UARTTest..
-Removed 0 unused cells and 133 unused wires.
+Removed 0 unused cells and 138 unused wires.
 <suppressed ~1 debug messages>
 
 3.43. Executing TECHMAP pass (map to technology primitives).
@@ -1068,7 +1038,7 @@ No more expansions possible.
 3.44. Executing ABC pass (technology mapping using ABC).
 
 3.44.1. Extracting gate netlist of module `\UARTTest' to `<abc-temp-dir>/input.blif'..
-Extracted 158 gates and 191 wires to a netlist network with 31 inputs and 34 outputs.
+Extracted 158 gates and 191 wires to a netlist network with 31 inputs and 35 outputs.
 
 3.44.1.1. Executing ABC.
 Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
@@ -1087,20 +1057,20 @@ ABC: + dch -f
 ABC: + if 
 ABC: + mfs2 
 ABC: + dress 
-ABC: Total number of equiv classes                =      35.
-ABC: Participating nodes from both networks       =      95.
-ABC: Participating nodes from the first network   =      44. (  81.48 % of nodes)
-ABC: Participating nodes from the second network  =      51. (  94.44 % of nodes)
-ABC: Node pairs (any polarity)                    =      44. (  81.48 % of names can be moved)
-ABC: Node pairs (same polarity)                   =      39. (  72.22 % of names can be moved)
+ABC: Total number of equiv classes                =      37.
+ABC: Participating nodes from both networks       =      99.
+ABC: Participating nodes from the first network   =      46. (  83.64 % of nodes)
+ABC: Participating nodes from the second network  =      53. (  96.36 % of nodes)
+ABC: Node pairs (any polarity)                    =      46. (  83.64 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      40. (  72.73 % of names can be moved)
 ABC: Total runtime =     0.01 sec
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 3.44.1.2. Re-integrating ABC results.
-ABC RESULTS:              $lut cells:       53
-ABC RESULTS:        internal signals:      126
+ABC RESULTS:              $lut cells:       54
+ABC RESULTS:        internal signals:      125
 ABC RESULTS:           input signals:       31
-ABC RESULTS:          output signals:       34
+ABC RESULTS:          output signals:       35
 Removing temp directory.
 Removed 0 unused cells and 113 unused wires.
 
@@ -1175,106 +1145,107 @@ Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
 3.45.2. Continuing TECHMAP pass.
-Using template $paramod\$lut\WIDTH=3\LUT=8'00010000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'00000001 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'0000000000000001 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'10000000 for cells of type $lut.
-Using template $paramod$2ddb5b5cad1eda4b448691edd161080bb92bfe50\$lut for cells of type $lut.
-Using template $paramod$89a7c44637a153ae876a5df3b846d5543893af1c\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'0100 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=32'10000000100000001000000011111111 for cells of type $lut.
-Using template $paramod$f275b2d97237f5f7d3462ef47444def2125c8869\$lut for cells of type $lut.
-Using template $paramod$629bea346f0daddb39cb1ebf17c36b3d1144d5d1\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'1110 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1100111110100000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=33023 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=4\LUT=16'0111111100000000 for cells of type $lut.
-Using template $paramod$74303b63fa170e00cba212e866b4c6c39b46b2d1\$lut for cells of type $lut.
-Using template $paramod$fc4ca8f0b7150809e177c4fa12feccd73bbbb2e3\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'1000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'1001 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=1\LUT=2'01 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=2\LUT=4'0001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=32'10000000100000001000000011111111 for cells of type $lut.
+Using template $paramod$89a7c44637a153ae876a5df3b846d5543893af1c\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$2ddb5b5cad1eda4b448691edd161080bb92bfe50\$lut for cells of type $lut.
+Using template $paramod$d96f3784248b2511a4228f0fe2c9dddb6e974cf8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00001110 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1010000000111111 for cells of type $lut.
-Using template $paramod$43d36707918893cdc94f3173e86faa45633b8ce7\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=5\LUT=8323072 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'11100001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0111111100000000 for cells of type $lut.
+Using template $paramod$aac1a16ad6f23bfd9dc943bad327811b3d049e84\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'10000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=33023 for cells of type $lut.
+Using template $paramod$df79f5d4c4e83087df399c80a383ff5528e49146\$lut for cells of type $lut.
+Using template $paramod$adeb62acf2e8ba51e8fb8f192697430799468fc2\$lut for cells of type $lut.
 Using template $paramod\$lut\WIDTH=4\LUT=16'1111111000000001 for cells of type $lut.
-Using template $paramod$b1bd2a921ec0f1ea0cc7578a2bcf32d761c7f62f\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=3\LUT=8'11100000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0001 for cells of type $lut.
+Using template $paramod$4f86f7450df106cfc0b46ec818faf56ccaad25ac\$lut for cells of type $lut.
+Using template $paramod$43d36707918893cdc94f3173e86faa45633b8ce7\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=5\LUT=8323072 for cells of type $lut.
+Using template $paramod$629bea346f0daddb39cb1ebf17c36b3d1144d5d1\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=1\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11100001 for cells of type $lut.
 No more expansions possible.
-<suppressed ~460 debug messages>
+<suppressed ~474 debug messages>
 
 3.46. Executing OPT_LUT_INS pass (discard unused LUT inputs).
 Optimizing LUTs in UARTTest.
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1533.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1533.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut4 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut5 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut6 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut7 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1552.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1552.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut4 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut5 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut6 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1548.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut4 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut5 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut6 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1535.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1535.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut4 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut5 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut6 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1550.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut4 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut5 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut6 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut7 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1532.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1532.lut3 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1519.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1519.lut2 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1519.lut4 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1519.lut5 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1519.lut6 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1525.lut1 (4 -> 3)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1520.lut2 (4 -> 3)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1520.lut3 (4 -> 3)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1524.lut7 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1520.lut1 (4 -> 3)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1519.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1526.lut1 (4 -> 3)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1532.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1533.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1535.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1540.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1545.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1541.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1547.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1552.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1549.lut1 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1554.lut0 (4 -> 0)
-  Optimizing lut $abc$1518$auto$blifparse.cc:498:parse_blif$1555.lut0 (4 -> 0)
-Removed 0 unused cells and 93 unused wires.
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1542.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1542.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut4 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut5 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut6 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1561.lut1 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut4 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut5 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut6 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut7 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1563.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1563.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1545.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1545.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1543.lut1 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1543.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1543.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut4 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut5 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut6 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut7 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut4 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut5 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut6 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1559.lut1 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut3 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut4 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut5 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut6 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut7 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1552.lut7 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1530.lut2 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1530.lut4 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1530.lut5 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1530.lut6 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1531.lut7 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1535.lut2 (4 -> 3)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1535.lut3 (4 -> 3)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1536.lut1 (4 -> 3)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1537.lut1 (4 -> 3)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1530.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1535.lut1 (4 -> 3)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1530.lut1 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1542.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1545.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1550.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1556.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1558.lut1 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1563.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1565.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1566.lut0 (4 -> 0)
+  Optimizing lut $abc$1528$auto$blifparse.cc:498:parse_blif$1560.lut1 (4 -> 0)
+Removed 0 unused cells and 96 unused wires.
 
 3.47. Executing AUTONAME pass.
-Renamed 2058 objects in module UARTTest (42 iterations).
-<suppressed ~381 debug messages>
+Renamed 2223 objects in module UARTTest (51 iterations).
+<suppressed ~407 debug messages>
 
 3.48. Executing HIERARCHY pass (managing design hierarchy).
 
@@ -1289,19 +1260,19 @@ Removed 0 unused modules.
 
 === UARTTest ===
 
-   Number of wires:                189
-   Number of wire bits:            352
-   Number of public wires:         189
-   Number of public wire bits:     352
+   Number of wires:                201
+   Number of wire bits:            364
+   Number of public wires:         201
+   Number of public wire bits:     364
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                216
+   Number of cells:                230
      CCU2C                           6
-     L6MUX21                        26
-     LUT4                          113
-     PFUMX                          44
-     TRELLIS_FF                     27
+     L6MUX21                        29
+     LUT4                          120
+     PFUMX                          47
+     TRELLIS_FF                     28
 
 3.50. Executing CHECK pass (checking for obvious problems).
 checking module UARTTest..
@@ -1309,20 +1280,20 @@ found and reported 0 problems.
 
 3.51. Executing JSON backend.
 
-End of script. Logfile hash: c916223b6e, CPU: user 2.98s system 0.56s, MEM: 248.18 MB peak
+End of script. Logfile hash: 6ad14a219a, CPU: user 1.59s system 0.52s, MEM: 248.27 MB peak
 Yosys 0.9+3578 (git sha1 ed579038, clang 6.0.0-1ubuntu2 -fPIC -Os)
-Time spent: 50% 15x read_verilog (1 sec), 12% 8x techmap (0 sec), ...
+Time spent: 50% 15x read_verilog (1 sec), 13% 1x abc (0 sec), ...
 nextpnr-ecp5 --json UARTTest.json --textcfg UARTTest_out.config --um5g-85k --package CABGA381 --lpf ecp5.lpf
 
 
 Info: Logic utilisation before packing:
-Info:     Total LUT4s:       125/83640     0%
-Info:         logic LUTs:    113/83640     0%
+Info:     Total LUT4s:       132/83640     0%
+Info:         logic LUTs:    120/83640     0%
 Info:         carry LUTs:     12/83640     0%
 Info:           RAM LUTs:      0/41820     0%
 Info:          RAMW LUTs:      0/20910     0%
 
-Info:      Total DFFs:        54/83640     0%
+Info:      Total DFFs:        56/83640     0%
 
 Info: Packing IOs..
 Info: pin 'RS232_Rx$tr_io' constrained to Bel 'X0/Y92/PIOB'.
@@ -1341,13 +1312,13 @@ Info: Packing unpaired FFs into a SLICE...
 Info: Generating derived timing constraints...
 Info: Promoting globals...
 Info:     promoting clock net clk$TRELLIS_IO_IN to global network
-Info: Checksum: 0x540940ee
+Info: Checksum: 0x3e6e9161
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0x803b1d75
+Info: Checksum: 0xd9a1d777
 
 Info: Device utilisation:
-Info: 	       TRELLIS_SLICE:    76/41820     0%
+Info: 	       TRELLIS_SLICE:    81/41820     0%
 Info: 	          TRELLIS_IO:     5/  365     1%
 Info: 	                DCCA:     1/   56     1%
 Info: 	              DP16KD:     0/  208     0%
@@ -1374,164 +1345,166 @@ Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
 Info: 	        ECLKBRIDGECS:     0/    2     0%
 
 Info: Placed 5 cells based on constraints.
-Info: Creating initial analytic placement for 43 cells, random placement wirelen = 7771.
-Info:     at initial placer iter 0, wirelen = 254
-Info:     at initial placer iter 1, wirelen = 237
-Info:     at initial placer iter 2, wirelen = 247
-Info:     at initial placer iter 3, wirelen = 242
+Info: Creating initial analytic placement for 44 cells, random placement wirelen = 7800.
+Info:     at initial placer iter 0, wirelen = 291
+Info:     at initial placer iter 1, wirelen = 245
+Info:     at initial placer iter 2, wirelen = 242
+Info:     at initial placer iter 3, wirelen = 245
 Info: Running main analytical placer.
-Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 243, spread = 443, legal = 473; time = 0.01s
-Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 263, spread = 441, legal = 466; time = 0.01s
-Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 272, spread = 412, legal = 447; time = 0.01s
-Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 268, spread = 434, legal = 437; time = 0.02s
-Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 272, spread = 426, legal = 457; time = 0.01s
-Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 291, spread = 439, legal = 451; time = 0.01s
-Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 300, spread = 429, legal = 438; time = 0.01s
-Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 295, spread = 428, legal = 424; time = 0.01s
-Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 307, spread = 408, legal = 436; time = 0.01s
-Info:     at iteration #10, type TRELLIS_SLICE: wirelen solved = 314, spread = 406, legal = 430; time = 0.01s
-Info:     at iteration #11, type TRELLIS_SLICE: wirelen solved = 318, spread = 398, legal = 429; time = 0.01s
-Info:     at iteration #12, type TRELLIS_SLICE: wirelen solved = 330, spread = 438, legal = 455; time = 0.01s
-Info:     at iteration #13, type TRELLIS_SLICE: wirelen solved = 351, spread = 438, legal = 466; time = 0.01s
-Info: HeAP Placer Time: 0.28s
-Info:   of which solving equations: 0.09s
-Info:   of which spreading cells: 0.06s
+Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 242, spread = 447, legal = 478; time = 0.01s
+Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 260, spread = 424, legal = 468; time = 0.01s
+Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 269, spread = 475, legal = 512; time = 0.01s
+Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 297, spread = 455, legal = 482; time = 0.01s
+Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 316, spread = 453, legal = 477; time = 0.01s
+Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 318, spread = 434, legal = 464; time = 0.01s
+Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 294, spread = 422, legal = 451; time = 0.01s
+Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 299, spread = 429, legal = 439; time = 0.01s
+Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 303, spread = 418, legal = 448; time = 0.01s
+Info:     at iteration #10, type TRELLIS_SLICE: wirelen solved = 307, spread = 429, legal = 463; time = 0.01s
+Info:     at iteration #11, type TRELLIS_SLICE: wirelen solved = 321, spread = 439, legal = 464; time = 0.01s
+Info:     at iteration #12, type TRELLIS_SLICE: wirelen solved = 322, spread = 434, legal = 440; time = 0.02s
+Info:     at iteration #13, type TRELLIS_SLICE: wirelen solved = 321, spread = 409, legal = 451; time = 0.02s
+Info: HeAP Placer Time: 0.22s
+Info:   of which solving equations: 0.10s
+Info:   of which spreading cells: 0.04s
 Info:   of which strict legalisation: 0.00s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 10, wirelen = 424
-Info:   at iteration #5: temp = 0.000000, timing cost = 10, wirelen = 389
-Info:   at iteration #8: temp = 0.000000, timing cost = 10, wirelen = 377 
-Info: SA placement time 0.07s
+Info:   at iteration #1: temp = 0.000000, timing cost = 10, wirelen = 439
+Info:   at iteration #5: temp = 0.000000, timing cost = 10, wirelen = 396
+Info:   at iteration #10: temp = 0.000000, timing cost = 10, wirelen = 382
+Info:   at iteration #10: temp = 0.000000, timing cost = 10, wirelen = 382 
+Info: SA placement time 0.13s
 
-Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 216.08 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 210.44 MHz (PASS at 12.00 MHz)
 
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>: 10.22 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>: 10.39 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [ 73110,  73567) |* 
-Info: [ 73567,  74024) | 
-Info: [ 74024,  74481) | 
-Info: [ 74481,  74938) |* 
-Info: [ 74938,  75395) | 
-Info: [ 75395,  75852) | 
-Info: [ 75852,  76309) | 
-Info: [ 76309,  76766) | 
-Info: [ 76766,  77223) | 
-Info: [ 77223,  77680) | 
-Info: [ 77680,  78137) | 
-Info: [ 78137,  78594) | 
-Info: [ 78594,  79051) |********* 
-Info: [ 79051,  79508) |********** 
-Info: [ 79508,  79965) | 
-Info: [ 79965,  80422) | 
-Info: [ 80422,  80879) |********* 
-Info: [ 80879,  81336) |** 
-Info: [ 81336,  81793) |*********** 
-Info: [ 81793,  82250) |******* 
-Info: Checksum: 0x2776db2f
+Info: [ 72948,  73415) |* 
+Info: [ 73415,  73882) | 
+Info: [ 73882,  74349) | 
+Info: [ 74349,  74816) | 
+Info: [ 74816,  75283) |* 
+Info: [ 75283,  75750) | 
+Info: [ 75750,  76217) | 
+Info: [ 76217,  76684) | 
+Info: [ 76684,  77151) | 
+Info: [ 77151,  77618) | 
+Info: [ 77618,  78085) | 
+Info: [ 78085,  78552) | 
+Info: [ 78552,  79019) |*************** 
+Info: [ 79019,  79486) |***** 
+Info: [ 79486,  79953) | 
+Info: [ 79953,  80420) | 
+Info: [ 80420,  80887) |******** 
+Info: [ 80887,  81354) |*** 
+Info: [ 81354,  81821) |********** 
+Info: [ 81821,  82288) |********* 
+Info: Checksum: 0x1ab5c23e
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 382 arcs.
+Info: Routing 424 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        382 |        0        382 |    0   382 |         0|       0.44       0.44|
+Info:        424 |        0        424 |    0   424 |         0|       0.21       0.21|
 Info: Routing complete.
-Info: Router1 time 0.44s
-Info: Checksum: 0xbaf97ba1
+Info: Router1 time 0.21s
+Info: Checksum: 0x6ead337a
 
 Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
 Info: curr total
-Info:  0.3  0.3  Source transmit_LUT4_D_Z_PFUMX_Z_C0_LUT4_D_Z_L6MUX21_Z_3_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.Q1
-Info:  0.9  1.3    Net uart0.tx_clk[6] budget 18.070999 ns (3,83) -> (6,84)
-Info:                Sink transmit_LUT4_D_Z_PFUMX_Z_C0_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.A0
+Info:  0.3  0.3  Source transmit_LUT4_D_Z_PFUMX_Z_1_C0_LUT4_D_1_Z_L6MUX21_Z_4_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.Q1
+Info:  1.0  1.3    Net uart0.tx_clk[5] budget 18.068001 ns (5,91) -> (4,88)
+Info:                Sink transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S1_COUT_CCU2C_COUT_1$CCU2_SLICE.A1
 Info:                Defined in:
 Info:                  UARTTest.v:24.10-36.7
 Info:                  uart.v:99.34-99.40
-Info:  0.3  1.5  Source transmit_LUT4_D_Z_PFUMX_Z_C0_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.FCO
-Info:  0.0  1.5    Net transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S0_COUT[6] budget 0.000000 ns (6,84) -> (6,84)
-Info:                Sink transmit_LUT4_D_Z_PFUMX_Z_C0_CCU2C_S1$CCU2_SLICE.FCI
+Info:  0.3  1.6  Source transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S1_COUT_CCU2C_COUT_1$CCU2_SLICE.FCO
+Info:  0.0  1.6    Net transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S0_COUT[4] budget 0.000000 ns (4,88) -> (5,88)
+Info:                Sink transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S1_COUT_CCU2C_COUT$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  UARTTest.v:24.10-36.7
 Info:                  uart.v:149.22-149.35
 Info:                  /usr/local/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.3  1.8  Source transmit_LUT4_D_Z_PFUMX_Z_C0_CCU2C_S1$CCU2_SLICE.F0
-Info:  0.9  2.6    Net transmit_LUT4_D_Z_PFUMX_Z_C0_CCU2C_S1_S0[0] budget 18.070999 ns (6,84) -> (6,83)
-Info:                Sink transmit_LUT4_D_Z_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.A0
+Info:  0.3  1.8  Source transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S1_COUT_CCU2C_COUT$CCU2_SLICE.F0
+Info:  0.7  2.6    Net transmit_LUT4_D_Z_PFUMX_Z_1_C0_CCU2C_S1_COUT_CCU2C_COUT_S0[4] budget 18.066999 ns (5,88) -> (4,87)
+Info:                Sink transmit_LUT4_D_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.M0
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.2  2.9  Source transmit_LUT4_D_Z_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
-Info:  0.0  2.9    Net transmit_LUT4_D_Z_L6MUX21_Z_D0_L6MUX21_Z_D1 budget 0.000000 ns (6,83) -> (6,83)
-Info:                Sink transmit_LUT4_D_Z_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
+Info:  0.2  2.7  Source transmit_LUT4_D_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
+Info:  0.0  2.7    Net transmit_LUT4_D_Z_L6MUX21_Z_D1 budget 0.000000 ns (4,87) -> (4,87)
+Info:                Sink transmit_LUT4_D_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.54-158.56
-Info:  0.1  3.0  Source transmit_LUT4_D_Z_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.0  3.0    Net transmit_LUT4_D_Z_L6MUX21_Z_D0 budget 0.000000 ns (6,83) -> (6,83)
-Info:                Sink transmit_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXA
-Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.66-158.68
-Info:  0.1  3.2  Source transmit_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
-Info:  0.9  4.0    Net led_LUT4_C_Z[3] budget 20.365000 ns (6,83) -> (6,86)
-Info:                Sink uart0.tx_state_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_PFUMX_Z_SLICE.D1
+Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:142.38-142.40
+Info:  0.1  2.8  Source transmit_LUT4_D_Z_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
+Info:  1.0  3.9    Net led_LUT4_C_Z[3] budget 18.066999 ns (4,87) -> (6,89)
+Info:                Sink uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.D1
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
-Info:  0.2  4.3  Source uart0.tx_state_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX0
-Info:  0.0  4.3    Net uart0.tx_state_TRELLIS_FF_Q_CE_L6MUX21_Z_D0 budget 0.000000 ns (6,86) -> (6,86)
-Info:                Sink uart0.tx_state_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXA
+Info:  0.2  4.1  Source uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
+Info:  0.0  4.1    Net uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1 budget 0.000000 ns (6,89) -> (6,89)
+Info:                Sink uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:142.34-142.36
-Info:  0.1  4.4  Source uart0.tx_state_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.9  5.3    Net uart0.tx_state_TRELLIS_FF_Q_CE budget 20.365000 ns (6,86) -> (6,87)
-Info:                Sink uart0.tx_state_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_LUT4_Z_SLICE.CE
-Info:  0.0  5.3  Setup uart0.tx_state_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_LUT4_Z_SLICE.CE
-Info: 1.7 ns logic, 3.5 ns routing
+Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.62-158.64
+Info:  0.1  4.2  Source uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
+Info:  0.0  4.2    Net uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1 budget 0.000000 ns (6,89) -> (6,89)
+Info:                Sink uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXB
+Info:                Defined in:
+Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:158.70-158.72
+Info:  0.1  4.4  Source uart0.tx_data_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
+Info:  1.2  5.6    Net uart0.tx_data_TRELLIS_FF_Q_CE budget 27.101000 ns (6,89) -> (2,89)
+Info:                Sink uart0.tx_data_TRELLIS_FF_Q_3_SLICE.CE
+Info:  0.0  5.6  Setup uart0.tx_data_TRELLIS_FF_Q_3_SLICE.CE
+Info: 1.7 ns logic, 4.0 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
 Info: curr total
-Info:  0.3  0.3  Source uart0.tx_state_TRELLIS_FF_Q_DI_L6MUX21_Z_D1_PFUMX_Z_SLICE.Q1
-Info:  0.5  0.8    Net uart0.tx_state[0] budget 20.365999 ns (5,87) -> (6,87)
-Info:                Sink led_LUT4_C_SLICE.D1
+Info:  0.3  0.3  Source uart0.tx_state_TRELLIS_FF_Q_DI_L6MUX21_Z_SD_LUT4_Z_SLICE.Q1
+Info:  0.4  0.7    Net uart0.tx_state[1] budget 20.362000 ns (6,90) -> (6,90)
+Info:                Sink led_LUT4_C_SLICE.C1
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ecp5/cells_map.v:109.23-109.24
+Info:                  UARTTest.v:24.10-36.7
+Info:                  uart.v:106.15-106.23
 Info:  0.1  0.9  Source led_LUT4_C_SLICE.F1
-Info:  6.0  7.0    Net rxout$TRELLIS_IO_OUT budget 41.442001 ns (6,87) -> (76,0)
+Info:  6.5  7.4    Net rxout$TRELLIS_IO_OUT budget 41.442001 ns (6,90) -> (76,0)
 Info:                Sink led$tr_io.I
 Info:                Defined in:
 Info:                  UARTTest.v:24.10-36.7
 Info:                  uart.v:60.17-60.32
-Info: 0.4 ns logic, 6.5 ns routing
+Info: 0.4 ns logic, 7.0 ns routing
 
-Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 189.65 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 178.38 MHz (PASS at 12.00 MHz)
 
-Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>: 6.98 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>: 7.41 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [ 76349,  76656) |* 
-Info: [ 76656,  76963) | 
-Info: [ 76963,  77270) | 
-Info: [ 77270,  77577) | 
-Info: [ 77577,  77884) |* 
-Info: [ 77884,  78191) |* 
-Info: [ 78191,  78498) |*********** 
-Info: [ 78498,  78805) |**** 
-Info: [ 78805,  79112) |*** 
-Info: [ 79112,  79419) | 
-Info: [ 79419,  79726) | 
-Info: [ 79726,  80033) | 
-Info: [ 80033,  80340) |**** 
-Info: [ 80340,  80647) |***** 
-Info: [ 80647,  80954) |** 
-Info: [ 80954,  81261) |***** 
-Info: [ 81261,  81568) |******* 
-Info: [ 81568,  81875) | 
-Info: [ 81875,  82182) |** 
-Info: [ 82182,  82489) |**** 
+Info: [ 75922,  76251) |* 
+Info: [ 76251,  76580) | 
+Info: [ 76580,  76909) | 
+Info: [ 76909,  77238) | 
+Info: [ 77238,  77567) | 
+Info: [ 77567,  77896) |***** 
+Info: [ 77896,  78225) |*** 
+Info: [ 78225,  78554) |**** 
+Info: [ 78554,  78883) |***** 
+Info: [ 78883,  79212) |**** 
+Info: [ 79212,  79541) | 
+Info: [ 79541,  79870) | 
+Info: [ 79870,  80199) |* 
+Info: [ 80199,  80528) |***** 
+Info: [ 80528,  80857) |*** 
+Info: [ 80857,  81186) |********** 
+Info: [ 81186,  81515) |**** 
+Info: [ 81515,  81844) | 
+Info: [ 81844,  82173) |** 
+Info: [ 82173,  82502) |***** 
 ecppack --svf UARTTest.svf UARTTest_out.config UARTTest.bit
 rm UARTTest.json UARTTest_out.config

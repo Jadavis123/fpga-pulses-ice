@@ -17,7 +17,7 @@ module UARTTest(
    wire 			   is_receiving;
    wire 			   is_transmitting;
    wire 			   recv_error;
-   reg [7:0]		   transmitbyte = 8'd65;
+   reg [7:0]		   transmitbyte = 8'd130; //tried 8'd65 for A but might have gotten endianness wrong, trying 8'd130 (reverse of 65)
    reg				   txstate = 0;
 
    // UART module, from https://github.com/cyrozap/osdvu

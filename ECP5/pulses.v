@@ -199,8 +199,8 @@ module pulses(
 
 					cdelay <= p1width + delay; //start of first CPMG pulse after initial pulse
 					cpulse <= p1width + delay + p2width; //end of first CPMG pulse
-					cblock_delay <= p1width + delay + p2width + pulse_block; //start of first block open 
-					cblock_on <= p1width + delay + p2width + pulse_block_off; //end of first block open
+					cblock_delay <= p1width + delay + p2width + delay - pulse_block; //start of first block open 
+					cblock_on <= p1width + delay + p2width + delay; //end of first block open
 					ccount <= 0;
 					
 					end // case: 0
@@ -236,8 +236,8 @@ module pulses(
 						if (ccount < cpmg) begin //if we have not reached the last pulse, close block and recalculate block marker values
 							inh <= block;
 
-							cblock_delay <= cpulse + pulse_block; //start of next open period = end of next pulse + block delay
-							cblock_on <= cpulse + pulse_block_off; //end of next open period = end of next pulse + block off
+							cblock_delay <= cpulse + delay - pulse_block; //start of next open period = end of next pulse + block delay
+							cblock_on <= cpulse + delay; //end of next open period = end of next pulse + block off
 		
 							ccount <= ccount + 1;
 						end
