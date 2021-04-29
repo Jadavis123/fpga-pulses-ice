@@ -5,7 +5,8 @@ module UARTTest(
 	input clk,
 	output RS232_Tx,
 	output led,
-	output rxout
+	output rxout1,
+	output rxout2
 	);
 
 	// Setup necessary for UART
@@ -57,12 +58,13 @@ module UARTTest(
 		.wb_ack(ack)
 	);*/
 	
-	/*//testing received values
-	assign rxout = rx_byte[0] || rx_byte[7];
-	assign led_set = rx_byte[0] || rx_byte[7];*/
+	//testing received values
+	assign rxout1 = received;
+	assign rxout2 = is_receiving;
+	assign led = received;
 	
-	//testing transmitted values
-	assign rxout = is_transmitting;
+	/*//testing transmitted values
+	assign rxout1 = is_transmitting;
 	assign led = is_transmitting;
 	
 	always @(posedge clk) begin
@@ -75,7 +77,7 @@ module UARTTest(
 			transmit <=0;
 			txstate <= 1;
 		end
-	end
+	end*/
 	
 endmodule
 		

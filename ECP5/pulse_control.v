@@ -13,9 +13,11 @@ module pulse_control(
 	// output [6:0]  po_att,
 	output [7:0]    cp,
 	output [7:0]  p_bl,
-	output [15:0] p_bl_off,
+	output [15:0] p_bl_hf,
 	output 	   bl,
-	output			rxd
+	output	   rxd,
+	output	   led,
+	output	   recv
 	);
 
    // Control the pulses
@@ -27,7 +29,7 @@ module pulse_control(
 	parameter stp1width = 30; // 150 ns
 	parameter stp2width = 60; // 300 ns
 	parameter stdelay = 200; // 1 us delay
-	parameter stblock = 50; // 250 ns block open
+	parameter stblock = 100; // 250 ns block open
 	parameter stcpmg = 1; 
 	parameter stnutdel = 100; 
 	parameter stnutwid = 100;
@@ -36,13 +38,14 @@ module pulse_control(
 	reg [15:0] 			   p1width = stp1width;
 	reg [15:0] 			   delay = stdelay;
 	reg [15:0] 			   p2width = stp2width;
-	reg [7:0] 			   pulse_block = 8'd50;
-	reg [15:0] 			   pulse_block_off = stblock;
+	reg [7:0] 			   pulse_block = stblock;
+	reg [15:0] 			   pulse_block_half = stblock/2;
 	reg [7:0]  			   cpmg = stcpmg;
 	reg 				   block = 1;
 	reg 				   rx_done = 0;
 	reg [15:0]			   nut_del = stnutdel;
 	reg [7:0]			   nut_wid = stnutdel;
+	reg					   recv_set = 0;
 
 	// Control the attenuators
 	//    parameter att_pre_val = 7'd1;
@@ -58,11 +61,12 @@ module pulse_control(
 	//    assign po_att = post_att;
 	assign cp = cpmg;
 	assign p_bl = pulse_block;
-	assign p_bl_off = pulse_block_off;
+	assign p_bl_hf = pulse_block_half;
 	assign bl = block;
 	assign rxd = rx_done;
 	assign nut_d = nut_del;
 	assign nut_w = nut_wid;
+	assign led = received;
 
 	// Setup necessary for UART
 	wire 			   reset = 0;
@@ -113,28 +117,27 @@ module pulse_control(
 	parameter STATE_SENDING     = 2'd2;
 
 	// These set the behavior based on the control byte
-	parameter CONT_SET_DELAY = 8'd0;
-	parameter CONT_SET_PERIOD = 8'd1;
-	parameter CONT_SET_PULSE1 = 8'd2;
-	parameter CONT_SET_PULSE2 = 8'd3;
-	parameter CONT_TOGGLE_PULSE1 = 8'd4;
-	parameter CONT_SET_CPMG = 8'd5;
-	parameter CONT_SET_ATT = 8'd6;
-	parameter CONT_SET_NUTW = 8'd7;
-	parameter CONT_SET_NUTD = 8'd8;
+	parameter CONT_SET_DELAY = 8'd247;
+	parameter CONT_SET_PERIOD = 8'd248;
+	parameter CONT_SET_PULSE1 = 8'd249;
+	parameter CONT_SET_PULSE2 = 8'd250;
+	parameter CONT_TOGGLE_PULSE1 = 8'd251;
+	parameter CONT_SET_CPMG = 8'd252;
+	parameter CONT_SET_ATT = 8'd253;
+	parameter CONT_SET_NUTW = 8'd254;
+	parameter CONT_SET_NUTD = 8'd255;
 
 	reg [2:0] 			   state = STATE_RECEIVING;
 
    // The communication runs at the 12 MHz clock rather than the 200 MHz clock.
    always @(posedge clk) begin
-      
-      case (state) 
-	
+	 case (state) 	
         STATE_RECEIVING: begin
-           transmit <= 0;
+		   transmit <= 0;
 	   case (readstate)
 	     read_A: begin
 		if(received) begin
+		   recv_set <= 1;
 		   if(readcount == 6'd32) begin // Last byte in the transmission
 		      vcontrol <= rx_byte;
 		      state<=STATE_CALCULATING;
@@ -181,7 +184,7 @@ module pulse_control(
 	     CONT_TOGGLE_PULSE1: begin
 		block <= vinput[1];
 		pulse_block <= vinput[15:8];
-		// pulse_block_off <= vinput[31:16];
+		pulse_block_half <= pulse_block/2;
 	     end
 
 	     CONT_SET_CPMG: begin
@@ -242,4 +245,6 @@ module pulse_control(
       endcase // case (state)
       
    end // always @ (posedge iCE_CLK)
+   
+   	assign recv = recv_set;
 endmodule // pulse_control

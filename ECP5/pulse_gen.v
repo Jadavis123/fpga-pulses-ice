@@ -1,13 +1,16 @@
 `default_nettype none
 module pulse_gen(
-	input 	clk, // 12 MHz base clock
+	input	clk_uart, 
+	input 	clk,
 	input 	RS232_Rx, // Receive pin for the FTDI chip
-	input 	resetn, // Reset the cycle
+	input 	resetn,	// Reset the cycle
+	output [7:0] led,
 	output RS232_Tx, // Transmit pin for the FTDI chip
 	output Pulse, // Output pin for the switch
 	output Sync, // Output pin for the SYNC pulse
 	//  output FM, // Output pin for the FM pulse
-	 output P2
+	 output P2,
+	 output recv
 	//  output P3,
 	//  output P4,
 	//  output J1_4,
@@ -34,7 +37,7 @@ module pulse_gen(
 	wire [7:0]		nut_wid;
 	wire 			block;
 	wire [7:0] 		pulse_block;
-	wire [15:0] 	pulse_block_off;
+	wire [15:0] 	pulse_block_half;
 	wire [7:0]	 	cpmg;
 	wire			rx_done;
 
@@ -45,6 +48,8 @@ module pulse_gen(
 	wire 		clk_pll;
 	wire 		clk_pll_gl;
 	wire 		lock;
+	
+	assign led[7:1] = 1;
 
 	// Setting the PLL to output a 201 MHz clock, based on code from
 	// https://gist.github.com/thoughtpolice/8ec923e1b3fc4bb12c11aa23b4dc53b5#file-ice40-v
@@ -57,7 +62,7 @@ module pulse_gen(
 	      );
 	// Setting up communications with LabView over USB
 	pulse_control control(
-		.clk(clk),
+		.clk(clk_uart),
 		.RS232_Rx(RS232_Rx),
 		.RS232_Tx(RS232_Tx),
 		.per(period),
@@ -70,11 +75,13 @@ module pulse_gen(
 		//  .po_att(post_att),
 		.cp(cpmg),
 		.p_bl(pulse_block),
-		.p_bl_off(pulse_block_off),
+		.p_bl_hf(pulse_block_half),
 		.bl(block),
-		.rxd(rx_done)
+		.rxd(rx_done),
+		.led(led[0]),
+		.recv(recv)
 		);
-   	// NOSIM_END
+	// NOSIM_END
    
    // Generating the necessary pulses
 	pulses pulses(
@@ -91,7 +98,7 @@ module pulse_gen(
 		//  .po_att(post_att),
 		.cp(cpmg),
 		.p_bl(pulse_block),
-		.p_bl_off(pulse_block_off),
+		.p_bl_hf(pulse_block_half),
 		.bl(block),
 		.rxd(rx_done),
 		.sync_on(Sync),

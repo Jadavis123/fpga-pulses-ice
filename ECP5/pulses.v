@@ -25,7 +25,7 @@ module pulses(
 	//       input [6:0]  po_att,
 	input [7:0]  cp, //CPMG settting: 0 for CW, 1 for Hahn echo, N>1 for CPMG with N pulses
 	input [7:0]  p_bl, //start of block open after pulses
-	input [15:0] p_bl_off, //end of block open after pulses
+	input [15:0] p_bl_hf, //half of pulse_block
 	input 	     bl,
 	input		 rxd,
 	// 	 input [31:0] period, // Duty cycle (LV)
@@ -71,7 +71,7 @@ module pulses(
 	reg [15:0] 			    delay;
 	reg [15:0] 			    p2width;
 	reg [7:0] 			    pulse_block;
-	reg [15:0] 			    pulse_block_off;
+	reg [15:0] 			    pulse_block_half;
 	reg [7:0]  			    cpmg;
 	reg 				   	block;
 	reg 					rx_done;
@@ -122,7 +122,7 @@ module pulses(
 			nutation_pulse_delay <= nut_d;
 			nutation_pulse_width <= nut_w;
 			pulse_block <= p_bl;
-			pulse_block_off <= p_bl_off;
+			pulse_block_half <= p_bl_hf;
 			cpmg <= cp;
 			block <= bl;
 		//end*/
@@ -133,15 +133,15 @@ module pulses(
 		delay <= 200;
 		nutation_pulse_delay <= 0;
 		nutation_pulse_width <= 0;
-		pulse_block <= 50;
-		pulse_block_off <= 100;
+		pulse_block <= 100;
+		pulse_block_half <= pulse_block/2;
 		cpmg <= 1;
 		block <= 1;
 		
 		//Calculate these values here, since they only change when their components are updated - better for timing
 		p2start <= p1width + delay;
 		sync_down <= p2start + p2width;
-		block_off <= sync_down + delay - pulse_block;
+		block_off <= sync_down + delay - pulse_block_half;
 		block_on <= block_off + pulse_block;
 		
 		//For some reason, this was reducing timing massively when in the clk_pll block, and it doesn't need to be
@@ -199,8 +199,8 @@ module pulses(
 
 					cdelay <= p1width + delay; //start of first CPMG pulse after initial pulse
 					cpulse <= p1width + delay + p2width; //end of first CPMG pulse
-					cblock_delay <= p1width + delay + p2width + delay - pulse_block; //start of first block open 
-					cblock_on <= p1width + delay + p2width + delay; //end of first block open
+					cblock_delay <= p1width + delay + p2width + delay - pulse_block_half; //start of first block open 
+					cblock_on <= p1width + delay + p2width + delay + pulse_block_half; //end of first block open
 					ccount <= 0;
 					
 					end // case: 0
@@ -236,8 +236,8 @@ module pulses(
 						if (ccount < cpmg) begin //if we have not reached the last pulse, close block and recalculate block marker values
 							inh <= block;
 
-							cblock_delay <= cpulse + delay - pulse_block; //start of next open period = end of next pulse + block delay
-							cblock_on <= cpulse + delay; //end of next open period = end of next pulse + block off
+							cblock_delay <= cpulse + delay - pulse_block_half; //start of next open period = end of next pulse + block delay
+							cblock_on <= cpulse + delay + pulse_block_half; //end of next open period = end of next pulse + block off
 		
 							ccount <= ccount + 1;
 						end

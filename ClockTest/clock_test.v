@@ -5,6 +5,7 @@ module clock_test(
 	);
 	
 	reg clk_pll, pulses;
+	reg recv_out = 0;
 	reg [31:0] counter = 0;
 	wire lock;
 	
@@ -14,7 +15,7 @@ module clock_test(
 	    .locked(lock)
 	    );
 		
-	assign out = pulses;
+	assign out = recv_out;
 	
 	parameter width = 30; // .5 us pulse
 	parameter delay = 200; // 1 us delay
@@ -24,7 +25,7 @@ module clock_test(
 	parameter p2end = p2start + 2*width;
 	
 	always @(posedge clk_pll) begin
-		case (counter)
+		/*case (counter)
 		0 : begin
 			pulses <= 1;
 		end
@@ -37,8 +38,9 @@ module clock_test(
 		p2end: begin
 			pulses <= 0;
 		end
-		endcase
+		endcase*/
 		counter <= (counter < period) ? counter + 1 : 0;
+		recv_out <= 1;
 	end
 	
 endmodule
